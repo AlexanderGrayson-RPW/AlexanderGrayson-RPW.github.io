@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    text-align: center;
+    background-image: url(background2.jpg);
+}
+
+.wrapper {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+header {
+    height: 100px;
+    background: #262626;
+    width: 100%;
+}
+
+.logo {
+    width: 30%;
+    float: left;
+    line-height: 100px;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 30px;
+    font-family: poppins;
+    color: #fff;
+    letter-spacing: 5px;
+}
+
+nav {
+    float: right;
+    line-height: 100px;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: poppins;
+    letter-spacing: 4px;
+    font-size: 20px;
+    margin: 0 10px;
+    color: #fff;
+}
+
+.banner-area {
+    width: 100%;
+    height: 200px;
+    background-image: url(cat.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    margin-top: -4.5%;
+    border: white;
+    border-width: 10%;
+}
+
+.banner-area h2 {
+    padding-top: 5%;
+    font-size: 70px;
+    font-family: poppins;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+h3 {
+    color: yellow;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    margin-left: -55%;
+}
+
+h5 {
+    color: white;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    margin-left: -55%;
+}
+
+canvas {
+    height: 400px;
+    width: 700px;
+    border: 0;
+    margin-bottom: -8%;
+    margin-top: 10%
+}
+
+.list {
+    width: 10cm;
+    height: 50cm;
+}
+
+.card {
+    margin-bottom: 5%;
+    margin-left: 5%;
+}
+
+.back {
+    margin-left: 5%;
+}
+
+form {
+    width: 50%;
+    float: left;
+    color: white;
+    margin-left: -12%;
+    font-size: 20px;
+}
+
+input {
+    display: table;
+    margin-bottom: 1em;
+    width: 60%;
+    font-size: 15px;
+    font-style: italic;
+    border: 3px solid #159;
+    border-radius: 3px;
+    padding: 3px;
+    text-align: center;
+    color: black;
+}
+
+#file {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+}
+
+.button {
+    display: block;
+    padding: 10px;
+    margin-top: 10%;
+}
+
+.upload,
+button {
+    color: #fff;
+    background: #159;
+    padding: 5px;
+    margin-top: 0em;
+    border: 2px solid #159;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form span {
+    font-size: 15px;
+}
+
+header {
+    width: 100%;
+    background: #159;
+    border-radius: 12px 12px 0 0;
+}
+
+header::after {
+    content: "";
+    display: flex;
+    clear: both;
+}
+
+.idcard img {
+    width: 0.1px;
+    height:0.1px;
+}
+
+#down {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.btn:hover {
+    background-color: RoyalBlue;
+}
+
+.success {
+    background-color: #ddffdd;
+    border-left: 6px solid #04AA6D;
+    font-size: 200%;
+  }  
+
+.info {
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196F3;
+    font-size: 150%;
+  }
