@@ -1,3 +1,9 @@
+<style>
+        @import url('http://fonts.cdnfonts.com/css/palatino-linotype');
+        @import url('http://fonts.cdnfonts.com/css/amalfi-coast');
+</style>
+                
+
 const canvas = document.getElementById('canvas')
 const ctx = canvas.getContext('2d')
 const nameInput = document.getElementById('name')
