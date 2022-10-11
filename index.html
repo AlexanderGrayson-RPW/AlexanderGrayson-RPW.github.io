@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+        <title>
+            ID Generator
+        </title>
+        <body>
+
+            <div class="container">
+
+                <form action="">
+
+                    <div class="row">
+
+                        <div class="col">
+                            <center>
+                                <p style=" font-size:200%"><b>TIN ID CARD GENERATOR</b></p>
+                            </center>
+
+                            <div class="success">
+                                <center>
+                                    <p>
+                                        <h4><strong>Note:</strong>
+                                        Upload the image first before fill up.<br /></h4>
+                                    </p>
+                                </center>
+                            </div>
+                            
+                            <br />
+
+                            <tr>
+                                <td>
+                                    <select id="country" onchange="showMap()" style=" width: 100%">
+                                        <option value="T">Tax Identification Card</option>
+                                    </select>
+                                </td>
+                            </tr><br /><br />
+
+                            <div id="cards">
+
+                                <center>
+                                    <div id="gcash">
+                                        <img src="" id="imgDisplayed">
+                                        <canvas id="canvas" height="375%" width="600%"></canvas>
+                                    </div>
+
+                                </center>
+                            </div>
+                            <br />
+
+                            <div class="inputBox">
+                                <span><b>Your Fullname :</b></span>
+                                <input id="name" type="text" placeholder="e.g. Juan Dela Cruz">
+                            </div>
+
+                            <div class="inputBox">
+                                <span><b>ID Number :</b></span>
+                                <input id="id" type="text" placeholder="e.g. 123-456-789-012">
+                            </div>
+
+                            <div class="inputBox">
+                                <span><b>Address :</b></span>
+                                <input id="address" type="text" placeholder="e.g. Quezon City">
+                            </div>
+
+                            <div class="inputBox">
+                                <span><b>Address Extension 2 :</b></span>
+                                <input id="address2" type="text" placeholder="e.g. Quezon City">
+                            </div>
+
+                            <div class="inputBox">
+                                <span><b>Address Extension 3 :</b></span>
+                                <input id="address3" type="text" placeholder="e.g. Quezon City">
+                            </div>
+
+                            <div class="inputBox">
+                                <span><b>Date of Birth :</b></span>
+                                <input id="birthday" type="text" placeholder="e.g. 01-01-1999">
+                            </div>
+
+                            <div class="inputBox">
+                                <span><b>Issue Date :</b></span>
+                                <input id="issue" type="text" placeholder="e.g. 01-01-2022">
+                            </div>
+
+                            <div class="inputBox">
+                                <span><b>Electronic Signature :</b></span>
+                                <input id="signature" type="text" placeholder="your signature">
+                            </div>
+
+                            <label for="file" class="upload"><b>Upload Image :</b></label>
+                            <input type="file" id="file" accept="image/*" onchange="loadImage(event)">
+                            <input type="reset" value="Clear" class="clear-btn">
+                            <button href="#" id="down">Download</button>
+                </form>
+            </div>
+
+            <script type="text/javascript" src="script.js"></script>
+            <script type="text/javascript" src="particles.js"></script>
+            <script type="text/javascript" src="app.js"></script>
+        </body>
+</html>
