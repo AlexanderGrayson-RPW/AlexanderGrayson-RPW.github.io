@@ -17,6 +17,7 @@
     padding: 25px;
     min-height: 100vh;
     background-image: url(background3.jpg);
+    background-repeat: no-repeat;
 }
 
     .container form {
