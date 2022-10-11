@@ -2,8 +2,8 @@ function Login() {
     username = document.getElementById("username").value;
     password = document.getElementById("password").value;
 
-    if(username == "alexgray" && password == "Alexander1107") {
-        alert("WELCOME KINANGINAMO!");
+    if(username == "AlexRPW" && password == "Alexander1107") {
+        alert("LOGIN SUCCESSFULLY!");
         window.location.href="idgenerator.html";
         return false;
     } else {
