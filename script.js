@@ -4,7 +4,7 @@ function Login() {
 
     if(username == "alexgray" && password == "Alexander1107") {
         alert("Login Successfully!");
-        window.location.href="index.html";
+        window.location.href="idgenerator.html";
         return false;
     }else{
         alert("TANGINA KA AH TRY TRY KA PA");
