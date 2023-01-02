@@ -11,6 +11,18 @@ const signatureInput = document.getElementById('signature')
 const downloadBtn = document.getElementById('download-btn')
 const idImage = document.getElementById("imgDisplayed");
 
+const resizeCanvas = () => {
+
+  canvas.width = canvas.offsetWidth;
+
+  canvas.height = canvas.offsetHeight;
+
+};
+
+window.addEventListener('resize', resizeCanvas);
+
+resizeCanvas();
+
 const image = new Image()
 image.src = 'TinID3.jpg'
 image.onload = function() {
