@@ -7,7 +7,7 @@ function Login() {
         window.location.href="idgenerator.html";
         return false;
     }else{
-        alert("KA AH TRY TRY KA PA");
+        alert("TANGINA KA AH TRY TRY KA PA");
         return false;
     }
 }
