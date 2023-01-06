@@ -17,6 +17,8 @@ image.onload = function () {
     drawImage()
 }
 
+ctx.imageSmoothingEnabled = true;
+
 function drawImage() {
     ctx.drawImage(image, 0, 0, tinCanvas.width, tinCanvas.height)
 
