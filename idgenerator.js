@@ -10,6 +10,12 @@ const issueInput = document.getElementById('issue')
 const signatureInput = document.getElementById('signature')
 const downloadBtn = document.getElementById('download-btn')
 const idImage = document.getElementById("imgDisplayed");
+var button = document.getElementById('logoutButton');
+
+/*button.addEventListener("click", () => {
+    alert("Do you want to Logout?");
+    window.history.back();
+});*/
 
 const image = new Image()
 image.src = 'TinID3.jpg'
