@@ -52,16 +52,15 @@
                                 <option value="OFW">Overseas Filipino Worker Identification Card</option>
                             </select>
                         </td>
-                    </tr>
+                    </tr><br />
 
                     <div id="tinID">
 
                         <center>
-
                             <img src="" id="imgDisplayed" style="display:none;">
                             <canvas id="tin" style="border:2px solid"></canvas>
-
                         </center>
+
                         <div class="inputBox">
                             <span><b>Fullname :</b></span>
                             <input id="name" type="text" placeholder="e.g. Juan Dela Cruz">
@@ -104,9 +103,7 @@
 
                         <label for="file" class="upload"><b>Upload Image :</b></label>
                         <input type="file" id="file" accept="image/*" onchange="loadImage(event)">
-
                         <input type="reset" value="Clear" class="clear-btn">
-
                         <button href="#" id="down">Download</button>
                     </div>
 
