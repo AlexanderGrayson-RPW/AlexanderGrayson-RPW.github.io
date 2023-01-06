@@ -1,129 +1,232 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="idgenerator.css">
+    <link href="https://fonts.cdnfonts.com/css/palatino-linotype" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/amalfi-coast" rel="stylesheet">
 
-* {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    transition: all .2s linear;
-}
+</head>
+<title>
+    ID Generator
+</title>
+<body>
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 25px;
-    min-height: 100vh;
-    background-image: url(background3.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+    <div class="container">
 
-    .container form {
-        padding: 20px;
-        width: 700px;
-        background: #fff;
-        box-shadow: 0 10px 10px rgba(0,0,0,.1);
-    }
+        <form action="">
 
-        .container form .row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
+            <div class="row">
 
-            .container form .row .col {
-                flex: 1 1 250px;
-            }
+                <div class="col">
+                    <center>
+                        <p style=" font-size:150%"><b>TIN ID CARD GENERATOR</b></p>
+                    </center>
 
-                .container form .row .col .inputBox {
-                    margin: 15px 0;
-                }
+                    <div class="success">
+                        <center>
+                            <p>
+                                <h4>
+                                    <strong>Note: </strong>
+                                    Upload the image ID first before filling up.<br />
+                                </h4>
+                            </p>
+                        </center>
+                    </div>
 
-                    .container form .row .col .inputBox span {
-                        margin-bottom: 10px;
-                        display: block;
-                    }
+                    <br />
 
-.success {
-    background-color: #e7f3fe;
-    border-left: 6px solid #2196F3;
-}
+                    <tr>
+                        <td>
+                            <select id="country" onchange="showMap()" style=" width: 100%">
+                                <option value="TIN">Tax Identification Card</option>
+                                <option value="VOTER">Voters Identification Card</option>
+                                <option value="PASSPORT">Passport/Pasaporte</option>
+                                <option value="DRIVER">Driver's License Identification Card</option>
+                                <option value="POSTAL">Postal Identification Card</option>
+                                <option value="PRC">Professional Regulation Commission Identification Card</option>
+                                <option value="PHILHEALTH">Philhealth Identification Card</option>
+                                <option value="SSS">Social Security System Identification Card</option>
+                                <option value="OFW">Overseas Filipino Worker Identification Card</option>
+                            </select>
+                        </td>
+                    </tr>
 
-.container form .row .col .inputBox input {
-    width: 100%;
-    border: 1px solid #ccc;
-    padding: 10px 15px;
-    font-size: 15px;
-}
+                    <div id="tinID">
 
+                        <center>
 
-.container form .clear-btn {
-    width: 100%;
-    padding: 12px;
-    font-size: 17px;
-    background: #070369;
-    color: #fff;
-    margin-top: 5px;
-    cursor: pointer;
-}
+                            <img src="" id="imgDisplayed" style="display:none;">
+                            <canvas id="tin"></canvas>
 
-    .container form .clear-btn:hover {
-        background: #0c20a6;
-    }
+                        </center>
+                        <div class="inputBox">
+                            <span><b>Fullname :</b></span>
+                            <input id="name" type="text" placeholder="e.g. Juan Dela Cruz">
+                        </div>
 
-#down {
-    width: 100%;
-    background-color: DodgerBlue;
-    border: none;
-    color: white;
-    padding: 12px 30px;
-    cursor: pointer;
-    font-size: 17px;
-    margin-top: 5px;
-    position: center;
-}
+                        <div class="inputBox">
+                            <span><b>ID Number :</b></span>
+                            <input id="id" type="text" placeholder="e.g. 123-456-789-012">
+                        </div>
 
-.container form .down-btn:hover {
-    background: #0c20a6;
-}
+                        <div class="inputBox">
+                            <span><b>Address :</b></span>
+                            <input id="address" type="text" placeholder="e.g. Quezon City">
+                        </div>
 
-#tin {
-    width: 100%;
-    height: 100%;
-    image-rendering: pixelated;
-}
+                        <div class="inputBox">
+                            <span><b>Address Extension 2 :</b></span>
+                            <input id="address2" type="text" placeholder="e.g. Quezon City">
+                        </div>
 
-#votersID {
-    display: none;
-}
+                        <div class="inputBox">
+                            <span><b>Address Extension 3 :</b></span>
+                            <input id="address3" type="text" placeholder="e.g. Quezon City">
+                        </div>
 
-#passportID {
-    display: none;
-}
+                        <div class="inputBox">
+                            <span><b>Date of Birth :</b></span>
+                            <input id="birthday" type="text" placeholder="e.g. 01-01-1999">
+                        </div>
 
-#driversID {
-    display: none;
-}
+                        <div class="inputBox">
+                            <span><b>Issue Date :</b></span>
+                            <input id="issue" type="text" placeholder="e.g. 01-01-2022">
+                        </div>
 
-#postalID {
-    display: none;
-}
+                        <div class="inputBox">
+                            <span><b>Electronic Signature :</b></span>
+                            <input id="signature" type="text" placeholder="your signature">
+                        </div>
 
-#prcID {
-    display: none;
-}
+                        <label for="file" class="upload"><b>Upload Image :</b></label>
+                        <input type="file" id="file" accept="image/*" onchange="loadImage(event)">
 
-#philhealthID {
-    display: none;
-}
+                        <input type="reset" value="Clear" class="clear-btn">
 
-#sssID {
-    display: none;
-}
+                        <button href="#" id="down">Download</button>
+                    </div>
 
-#ofwID {
-    display: none;
-}
+                    <div id="votersID">
+
+                        <center>
+                            <img src="not_avail.jpg" width="100%">
+                        </center>
+
+                        <div class="inputBox">
+                            <span><b>VIN :</b></span>
+                            <input id="vin" type="text" placeholder="e.g. 123-456-789-012">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Last Name :</b></span>
+                            <input id="name" type="text" placeholder="e.g. Juan Dela Cruz">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>First Name :</b></span>
+                            <input id="name" type="text" placeholder="e.g. Juan Dela Cruz">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Middle Name :</b></span>
+                            <input id="name" type="text" placeholder="e.g. Juan Dela Cruz">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Date of Birth :</b></span>
+                            <input id="birthday" type="text" placeholder="e.g. 01-01-1999">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Civil Status :</b></span>
+                            <input id="civil" type="text" placeholder="e.g. 01-01-1999">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Citizenship :</b></span>
+                            <input id="citizenship" type="text" placeholder="e.g. 01-01-1999">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Address :</b></span>
+                            <input id="address" type="text" placeholder="e.g. Quezon City">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Address Extension 2 :</b></span>
+                            <input id="address2" type="text" placeholder="e.g. Quezon City">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Precinct Number :</b></span>
+                            <input id="precint" type="text" placeholder="e.g. 01-01-2022">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Electronic Signature :</b></span>
+                            <input id="signature" type="text" placeholder="your signature">
+                        </div>
+
+                        <label for="file" class="upload"><b>Upload Image :</b></label>
+                        <input type="file" id="file" accept="image/*" onchange="loadImage(event)">
+
+                        <input type="reset" value="Clear" class="clear-btn">
+
+                        <button href="#" id="down">Download</button>
+                    </div>
+
+                    <div id="passportID">
+                        <center>
+                            <img src="not_avail.jpg" width="100%">
+                        </center>
+                    </div>
+
+                    <div id="driversID">
+                        <center>
+                            <img src="not_avail.jpg" width="100%">
+                        </center>
+                    </div>
+
+                    <div id="postalID">
+                        <center>
+                            <img src="not_avail.jpg" width="100%">
+                        </center>
+                    </div>
+
+                    <div id="prcID">
+                        <center>
+                            <img src="not_avail.jpg" width="100%">
+                        </center>
+                    </div>
+
+                    <div id="philhealthID">
+                        <center>
+                            <img src="not_avail.jpg" width="100%">
+                        </center>
+                    </div>
+
+                    <div id="sssID">
+                        <center>
+                            <img src="not_avail.jpg" width="100%">
+                        </center>
+                    </div>
+
+                    <div id="ofwID">
+                        <center>
+                            <img src="not_avail.jpg" width="100%">
+                        </center>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+    <br />
+
+    <script type="text/javascript" src="idgenerator.js"></script>
+</body>
+</html>
