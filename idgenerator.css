@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
 * {
     font-family: 'Poppins', sans-serif;
@@ -47,47 +47,48 @@
                         display: block;
                     }
 
-                    .success {
-                       background-color: #e7f3fe;
-                       border-left: 6px solid #2196F3;
-                    }
+.success {
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196F3;
+}
 
-                    .container form .row .col .inputBox input {
-                        width: 100%;
-                        border: 1px solid #ccc;
-                        padding: 10px 15px;
-                        font-size: 15px;
-                    }
+.container form .row .col .inputBox input {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 15px;
+}
 
 
-        .container form .clear-btn {
-            width: 100%;
-            padding: 12px;
-            font-size: 17px;
-            background: #070369;
-            color: #fff;
-            margin-top: 5px;
-            cursor: pointer;
-        }
+.container form .clear-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    background: #070369;
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+}
 
-            .container form .clear-btn:hover {
-                background: #0c20a6;
-            }
+    .container form .clear-btn:hover {
+        background: #0c20a6;
+    }
 
-            #down {
-                width: 100%;
-                background-color: DodgerBlue;
-                border: none;
-                color: white;
-                padding: 12px 30px;
-                cursor: pointer;
-                font-size: 17px;
-                margin-top: 5px;
-                position: center;
-            }
-                .container form .down-btn:hover {
-                background: #0c20a6;
-                }
+#down {
+    width: 100%;
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 17px;
+    margin-top: 5px;
+    position: center;
+}
+
+.container form .down-btn:hover {
+    background: #0c20a6;
+}
 
 #tin {
     width: 100%;
@@ -95,33 +96,34 @@
     image-rendering: pixelated;
 }
 
-                    #votersID {
-                    display: none;
-                    }
+#votersID {
+    display: none;
+}
 
-                        #passportID {
-                        display: none;
-                        }
+#passportID {
+    display: none;
+}
 
-                            #driversID {
-                            display: none;
-                            }
+#driversID {
+    display: none;
+}
 
-                                #postalID {
-                                display: none;
-                                }
+#postalID {
+    display: none;
+}
 
-                                    #prcID {
-                                    display: none;
-                                    }
+#prcID {
+    display: none;
+}
 
-                                        #philhealthID {
-                                        display: none;
-                                        }
-                                            #sssID {
-                                            display: none;
-                                            }
+#philhealthID {
+    display: none;
+}
 
-                                                #ofwID {
-                                                display: none;
-                                                }
+#sssID {
+    display: none;
+}
+
+#ofwID {
+    display: none;
+}
