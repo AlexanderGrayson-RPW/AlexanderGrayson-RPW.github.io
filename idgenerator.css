@@ -97,7 +97,7 @@
     position: center;
 }
 
-/*#logoutButton {
+#logoutButton {
     width: 100%;
     background-color: Red;
     border: none;
@@ -107,7 +107,7 @@
     font-size: 17px;
     margin-top: 5px;
     position: center;
-}*/
+}
 
 .container form .down-btn:hover {
     background: #0c20a6;
