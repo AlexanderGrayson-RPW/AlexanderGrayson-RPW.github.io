@@ -30,7 +30,6 @@ const height = image.height;
 tinCanvas.width = width;
 tinCanvas.height = height;
 
-
 ctx.imageSmoothingEnabled = true;
 
 function drawImage() {
@@ -42,9 +41,9 @@ function drawImage() {
     ctx.fillStyle = 'black'
     ctx.fillText(nameInput.value, 140, 270);
 
-    ctx.font = 'bold 530% Palatino Linotype' //620 FONT BEFORE
+    ctx.font = 'bold 520% Palatino Linotype' //620 FONT BEFORE
     ctx.fillStyle = 'black'
-    ctx.fillText(tinIdInput.value, 265, 385);
+    ctx.fillText(tinIdInput.value, 260, 385);
 
     ctx.font = 'bold 310% Palatino Linotype' //400 FONT BEFORE
     ctx.fillStyle = 'black'
