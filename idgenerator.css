@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'Palatino Linoype';
-    src: url(fonts/Palatino.ttf);
+    src: url(fonts/Palatino.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Amalfi Coast';
-    src: url(fonts/Amalfi Coast.ttf);
+    src: url(fonts/Amalfi Coast.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
 }
