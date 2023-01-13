@@ -35,13 +35,13 @@ ctx.imageSmoothingEnabled = true;
 function drawImage() {
     ctx.drawImage(image, 0, 0, tinCanvas.width, tinCanvas.height) //first 0 is right, second 0 is down
 
-    ctx.drawImage(idImage, 913, 290, 410, 420);
+    ctx.drawImage(idImage, 919, 293, 410, 420);
 
     ctx.font = 'bold 530% Palatino Linotype' //600 FONT BEFORE
     ctx.fillStyle = 'black'
     ctx.fillText(nameInput.value, 140, 270);
 
-    ctx.font = 'bold 500% Palatino Linotype' //620 FONT BEFORE
+    ctx.font = 'bold 495% Palatino Linotype' //620 FONT BEFORE
     ctx.fillStyle = 'black'
     ctx.fillText(tinIdInput.value, 260, 385);
 
