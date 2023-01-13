@@ -41,7 +41,7 @@ function drawImage() {
     ctx.fillStyle = 'black'
     ctx.fillText(nameInput.value, 140, 270);
 
-    ctx.font = 'bold 520% Palatino Linotype' //620 FONT BEFORE
+    ctx.font = 'bold 500% Palatino Linotype' //620 FONT BEFORE
     ctx.fillStyle = 'black'
     ctx.fillText(tinIdInput.value, 260, 385);
 
