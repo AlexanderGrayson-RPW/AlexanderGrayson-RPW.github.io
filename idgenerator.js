@@ -12,8 +12,6 @@ const downloadBtn = document.getElementById('download-btn')
 const idImage = document.getElementById("imgDisplayed");
 var button = document.getElementById('logoutButton');
 
-tinCanvas.width = window.innerWidth;
-tinCanvas.height = window.innerHeight;
 
 /*button.addEventListener("click", () => {
     alert("Do you want to logout?");
@@ -26,44 +24,51 @@ image.onload = function () {
     drawImage()
 }
 
+const width = image.width;
+const height = image.height;
+
+tinCanvas.width = width;
+tinCanvas.height = height;
+
+
 ctx.imageSmoothingEnabled = true;
 
 function drawImage() {
-    ctx.drawImage(image, 0, 0, tinCanvas.width, tinCanvas.height) //first 0 us right, second 0 is down
+    ctx.drawImage(image, 0, 0, tinCanvas.width, tinCanvas.height) //first 0 is right, second 0 is down
 
-    ctx.drawImage(idImage, 1235, 325, 545, 450);
+    ctx.drawImage(idImage, 913, 290, 410, 420);
 
-    ctx.font = 'bold 600% Palatino Linotype'
+    ctx.font = 'bold 530% Palatino Linotype' //600 FONT BEFORE
     ctx.fillStyle = 'black'
-    ctx.fillText(nameInput.value, 190, 310);
+    ctx.fillText(nameInput.value, 140, 270);
 
-    ctx.font = 'bold 620% Palatino Linotype'
+    ctx.font = 'bold 550% Palatino Linotype' //620 FONT BEFORE
     ctx.fillStyle = 'black'
-    ctx.fillText(tinIdInput.value, 380, 430);
+    ctx.fillText(tinIdInput.value, 275, 385);
 
-    ctx.font = 'bold 380% Palatino Linotype'
+    ctx.font = 'bold 310% Palatino Linotype' //400 FONT BEFORE
     ctx.fillStyle = 'black'
-    ctx.fillText(addressInput.value, 190, 500);
+    ctx.fillText(addressInput.value, 140, 440);
 
-    ctx.font = 'bold 380% Palatino Linotype'
+    ctx.font = 'bold 310% Palatino Linotype'
     ctx.fillStyle = 'black'
-    ctx.fillText(address2Input.value, 190, 570);
+    ctx.fillText(address2Input.value, 140, 510);
 
-    ctx.font = 'bold 380% Palatino Linotype'
+    ctx.font = 'bold 310% Palatino Linotype'
     ctx.fillStyle = 'black'
-    ctx.fillText(address3Input.value, 190, 640);
+    ctx.fillText(address3Input.value, 140, 580);
 
-    ctx.font = 'bold 400% Palatino Linotype'
+    ctx.font = 'bold 350% Palatino Linotype' //400 FONT BEFORE
     ctx.fillStyle = 'black'
-    ctx.fillText(birthdayInput.value, 700, 710);
+    ctx.fillText(birthdayInput.value, 510, 637);
 
-    ctx.font = 'bold 400% Palatino Linotype'
+    ctx.font = 'bold 350% Palatino Linotype'
     ctx.fillStyle = 'black'
-    ctx.fillText(issueInput.value, 700, 780);
+    ctx.fillText(issueInput.value, 510, 700);
 
-    ctx.font = 'bold 400% Amalfi Coast'
+    ctx.font = 'bold 310% Amalfi Coast'
     ctx.fillStyle = 'black'
-    ctx.fillText(signatureInput.value, 330, 890);
+    ctx.fillText(signatureInput.value, 250, 800);
 }
 
 signatureInput.addEventListener('input', function () {
