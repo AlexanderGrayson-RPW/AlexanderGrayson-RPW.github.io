@@ -42,13 +42,13 @@ function drawImage() {
     ctx.fillStyle = 'black'
     ctx.fillText(nameInput.value, 140, 270);
 
-    ctx.font = 'bold 550% Palatino Linotype' //620 FONT BEFORE
+    ctx.font = 'bold 530% Palatino Linotype' //620 FONT BEFORE
     ctx.fillStyle = 'black'
-    ctx.fillText(tinIdInput.value, 275, 385);
+    ctx.fillText(tinIdInput.value, 265, 385);
 
     ctx.font = 'bold 310% Palatino Linotype' //400 FONT BEFORE
     ctx.fillStyle = 'black'
-    ctx.fillText(addressInput.value, 140, 440);
+    ctx.fillText(addressInput.value, 140, 450);
 
     ctx.font = 'bold 310% Palatino Linotype'
     ctx.fillStyle = 'black'
@@ -56,7 +56,7 @@ function drawImage() {
 
     ctx.font = 'bold 310% Palatino Linotype'
     ctx.fillStyle = 'black'
-    ctx.fillText(address3Input.value, 140, 580);
+    ctx.fillText(address3Input.value, 140, 570);
 
     ctx.font = 'bold 350% Palatino Linotype' //400 FONT BEFORE
     ctx.fillStyle = 'black'
