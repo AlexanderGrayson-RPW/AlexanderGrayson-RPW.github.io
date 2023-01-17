@@ -107,6 +107,11 @@ function loadImage(event) {
     idImage.src = URL.createObjectURL(event.target.files[0]);
 }
 
+const clearCanvas = document.querySelector(".clear-btn");
+clearCanvas.addEventListener("click", () => {
+    ctx.clearRect(0, 0, tinCanvas.width, tinCanvas.height);
+});
+
 const download = document.getElementById("down");
 download.addEventListener("click", function () {
 
