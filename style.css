@@ -112,6 +112,16 @@ body {
     left: 0;
 }
 
+.input-field i.showHidePw{
+
+    right: 0;
+
+    cursor: pointer;
+
+    padding: 10px;
+
+}
+
 .form .text {
     color: #333;
     font-size: 14px;
