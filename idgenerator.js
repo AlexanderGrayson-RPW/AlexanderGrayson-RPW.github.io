@@ -107,7 +107,7 @@ function loadImage(event) {
     idImage.src = URL.createObjectURL(event.target.files[0]);
 }
 
-const clearCanvas = document.querySelector(".clear-btn");
+const clearCanvas = document.querySelector(".clear");
 clearCanvas.addEventListener("click", () => {
     ctx.clearRect(0, 0, tinCanvas.width, tinCanvas.height);
 });
@@ -223,7 +223,7 @@ const toastDetails = {
 
     timer: 10000,
 
-    success: {
+    down: {
 
         icon: 'fa-circle-check',
 
@@ -231,7 +231,7 @@ const toastDetails = {
 
     },
 
-    error: {
+    logout-button: {
 
         icon: 'fa-circle-xmark',
 
@@ -239,7 +239,7 @@ const toastDetails = {
 
     },
 
-    warning: {
+    note: {
 
         icon: 'fa-triangle-exclamation',
 
@@ -247,7 +247,7 @@ const toastDetails = {
 
     },
 
-    info: {
+    clear: {
 
         icon: 'fa-circle-info',
 
