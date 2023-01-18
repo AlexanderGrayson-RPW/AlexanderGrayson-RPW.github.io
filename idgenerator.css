@@ -76,7 +76,7 @@
     width: 100%;
     padding: 12px;
     font-size: 17px;
-    background: #070369;
+    background: DodgerBlue;
     color: #fff;
     margin-top: 5px;
     cursor: pointer;
@@ -112,6 +112,12 @@
 
 .container form .down-btn:hover {
     background: #0c20a6;
+}
+
+.container form .logout-btn:hover {
+
+    background: #0c20a6;
+
 }
 
 #tin {
