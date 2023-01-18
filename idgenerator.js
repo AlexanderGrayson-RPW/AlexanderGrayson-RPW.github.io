@@ -221,7 +221,7 @@ buttons = document.querySelectorAll(".buttons .btn");
 
 const toastDetails = {
 
-    timer: 6000,
+    timer: 10000,
 
     success: {
 
@@ -263,7 +263,7 @@ const removeToast = (toast) => {
 
     if(toast.timeoutId) clearTimeout(toast.timeoutId); // Clearing the timeout for the toast
 
-    setTimeout(() => toast.remove(), 3000); // Removing the toast after 500ms
+    setTimeout(() => toast.remove(), 10000); // Removing the toast after 500ms
 
 }
 
