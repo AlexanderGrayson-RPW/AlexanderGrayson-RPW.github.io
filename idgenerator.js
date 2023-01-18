@@ -112,6 +112,16 @@ clearCanvas.addEventListener("click", () => {
     ctx.clearRect(0, 0, tinCanvas.width, tinCanvas.height);
 });
 
+var logoutBtn = document.getElementById("logout-btn");
+
+logoutBtn.addEventListener("click", function() {
+
+
+
+    location.href = "index.html";
+
+});
+
 const download = document.getElementById("down");
 download.addEventListener("click", function () {
 
