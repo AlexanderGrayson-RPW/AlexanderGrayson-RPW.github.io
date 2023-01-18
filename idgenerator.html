@@ -105,11 +105,13 @@
                              </div>
                              
 
-                             <button class="clear-btn">Clear</button>
-                             <button href="#" id="down">Download</button>
-                             <button id="logout-btn">Logout</button>
+                             <button class="clear-btn" onclick="notifyInfo()">Clear</button>
+                             <button href="#" id="down" onclick="notifySuccess()">Download</button>
+                             <button id="logout-btn" onclick="notifyError()">Logout</button>
                              
                          </div>
+                
+                <div id="notification-area"></div>
 
                     <div id="votersID">
 
