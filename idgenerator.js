@@ -221,13 +221,13 @@ buttons = document.querySelectorAll(".buttons .btn");
 
 const toastDetails = {
 
-    timer: 5000,
+    timer: 6000,
 
     success: {
 
         icon: 'fa-circle-check',
 
-        text: 'Download: The image successfully downloaded.',
+        text: 'Download: The image was successfully downloaded.',
 
     },
 
@@ -235,7 +235,7 @@ const toastDetails = {
 
         icon: 'fa-circle-xmark',
 
-        text: 'Error: This is an error toast.',
+        text: 'Fatal Error: The session cannot be logged out.',
 
     },
 
@@ -243,7 +243,7 @@ const toastDetails = {
 
         icon: 'fa-triangle-exclamation',
 
-        text: 'Warning: This is a warning toast.',
+        text: 'Note: Upload the 1x1 photo ID before filling up.',
 
     },
 
@@ -251,7 +251,7 @@ const toastDetails = {
 
         icon: 'fa-circle-info',
 
-        text: 'Info: This is an information toast.',
+        text: 'Clear: The canvas was successfully cleared.',
 
     }
 
@@ -263,7 +263,7 @@ const removeToast = (toast) => {
 
     if(toast.timeoutId) clearTimeout(toast.timeoutId); // Clearing the timeout for the toast
 
-    setTimeout(() => toast.remove(), 500); // Removing the toast after 500ms
+    setTimeout(() => toast.remove(), 3000); // Removing the toast after 500ms
 
 }
 
