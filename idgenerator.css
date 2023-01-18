@@ -308,7 +308,7 @@
 
 }
 
-.toast.download::before, .btn#download {
+.toast.down::before, .btn#down {
 
   background: var(--success);
 
@@ -338,7 +338,7 @@
 
 }
 
-.toast.download .column i {
+.toast.down .column i {
 
   color: var(--success);
 
