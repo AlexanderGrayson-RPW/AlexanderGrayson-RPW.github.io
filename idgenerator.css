@@ -88,7 +88,7 @@
 
 #down {
     width: 100%;
-    background-color: DodgerBlue;
+    background-color: #4CAF50;
     border: none;
     color: white;
     padding: 12px 30px;
@@ -100,7 +100,7 @@
 
 #logout-btn {
     width: 100%;
-    background-color: Red;
+    background-color: #f44336;
     border: none;
     color: white;
     padding: 12px 30px;
