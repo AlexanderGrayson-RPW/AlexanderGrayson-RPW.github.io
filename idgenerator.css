@@ -294,7 +294,7 @@
 
   left: 0px;
 
-  animation: progress 5s linear forwards;
+  animation: progress 10s linear forwards;
 
 }
 
@@ -308,25 +308,25 @@
 
 }
 
-.toast.success::before, .btn#success {
+.toast.download::before, .btn#download {
 
   background: var(--success);
 
 }
 
-.toast.error::before, .btn#error {
+.toast.logout-btn::before, .btn#logout-btn {
 
   background: var(--error);
 
 }
 
-.toast.warning::before, .btn#warning {
+.toast.note::before, .btn#note {
 
   background: var(--warning);
 
 }
 
-.toast.info::before, .btn#info {
+.toast.clear::before, .btn#clear {
 
   background: var(--info);
 
@@ -338,25 +338,25 @@
 
 }
 
-.toast.success .column i {
+.toast.download .column i {
 
   color: var(--success);
 
 }
 
-.toast.error .column i {
+.toast.logout-btn .column i {
 
   color: var(--error);
 
 }
 
-.toast.warning .column i {
+.toast.note .column i {
 
   color: var(--warning);
 
 }
 
-.toast.info .column i {
+.toast.clear .column i {
 
   color: var(--info);
 
