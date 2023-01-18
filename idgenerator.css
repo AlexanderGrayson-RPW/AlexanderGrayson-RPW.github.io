@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 @font-face {
     font-family: 'Palatino Linoype';
@@ -24,21 +23,6 @@
     transition: all .2s linear;
 }
 
-:root {
-
-  --dark: #34495E;
-
-  --light: #ffffff;
-
-  --success: #0ABF30;
-
-  --error: #E24D4C;
-
-  --warning: #E9BD0C;
-
-  --info: #3498DB;
-
-}
 
 .container {
     display: flex;
