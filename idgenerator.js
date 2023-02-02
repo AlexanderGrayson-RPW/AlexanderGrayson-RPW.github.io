@@ -18,7 +18,7 @@ var button = document.getElementById('logoutButton');
 });*/
 
 const image = new Image()
-image.src = 'TinID3.jpg'
+//image.src = 'TinID3.jpg'
 image.onload = function () {
     drawImage()
 }
