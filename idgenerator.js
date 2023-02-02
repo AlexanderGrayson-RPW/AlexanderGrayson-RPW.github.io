@@ -124,7 +124,7 @@ function drawImage() {
         }
     });
 
-function notify(type,message){
+/*function notify(type,message){
 
   (()=>{
 
@@ -178,4 +178,4 @@ function notifyInfo(){
 
   notify("info","The canvas was successfully cleared.");
 
-}
+}*/
