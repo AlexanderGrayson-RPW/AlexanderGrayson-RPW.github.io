@@ -8,8 +8,6 @@ const container = document.querySelector(".container"),
 
       login = document.querySelector(".login-link");
 
-    //   js code to show/hide password and change icon
-
     pwShowHide.forEach(eyeIcon =>{
 
         eyeIcon.addEventListener("click", ()=>{
@@ -44,15 +42,11 @@ const container = document.querySelector(".container"),
 
     })
 
-    
-
-
-
 function Login() {
     username = document.getElementById("username").value;
     password = document.getElementById("password").value;
 
-    if(username == "Alexander0407" && password == "Alexander0407") {
+    if(username == "Alexgray0407" && password == "Alexgray0407") {
         alert("Login Successfully!");
         window.location.href="idgenerator.html";
         return false;
