@@ -140,6 +140,14 @@ function showMap() {
     } else {
         document.getElementById("tinID").style.display = 'none'
     }
+    
+    country = document.getElementById("country").value;
+    if (country == "NATIONAL") {
+        document.getElementById("natID").style.display = 'block'
+    }
+    else {
+        document.getElementById("natID").style.display = 'none'
+    }
 
     country = document.getElementById("country").value;
     if (country == "VOTER") {
