@@ -1,3 +1,5 @@
+//TIN ID SECTION
+
 const tinCanvas = document.getElementById('tin')
 const ctx = tinCanvas.getContext('2d')
 const nameInput = document.getElementById('name')
@@ -9,22 +11,24 @@ const birthdayInput = document.getElementById('birthday')
 const issueInput = document.getElementById('issue')
 const signatureInput = document.getElementById('signature')
 const downloadBtn = document.getElementById('download-btn')
-const idImage = document.getElementById("imgDisplayed");
-var button = document.getElementById('logoutButton');
+const idImage = document.getElementById('imgDisplayed');
+
+//var button = document.getElementById('logoutButton');
 
 /*button.addEventListener("click", () => {
     alert("Do you want to logout?");
     window.location.href = "index.html";
 });*/
 
-const image = new Image()
-image.src = 'TinID3.jpg'
-image.onload = function () {
+const tinImage = new Image()
+tinImage.src = 'TinID3.jpg';
+tinImage.onload = function () {
     drawImage()
 }
 
-const width = image.width;
-const height = image.height;
+let width = tinImage.width;
+let height = tinImage.height;
+
 tinCanvas.width = width;
 tinCanvas.height = height;
 
