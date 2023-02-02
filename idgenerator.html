@@ -112,6 +112,50 @@
                          </div>
                 
                 <div id="notification-area"></div>
+                
+                <div id="natID">
+                        <center>
+                            <img src="not_avail.jpg" width="100%" style="border:2px solid">
+                        </center>
+
+                        <div class="inputBox">
+                            <span><b>ID Number :</b></span>
+                            <input id="id" type="text" placeholder="e.g. 1234-5678-9012-3456">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Last Name :</b></span>
+                            <input id="lastName" type="text" placeholder="e.g. Grayson">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Given Name :</b></span>
+                            <input id="givenName" type="text" placeholder="e.g. Alexander">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Middle Name :</b></span>
+                            <input id="middleName" type="text" placeholder="e.g. Alexander">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Date of Birth :</b></span>
+                            <input id="birthday" type="text" placeholder="e.g. 01-01-1999">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Address :</b></span>
+                            <input id="address" type="text" placeholder="e.g. Quezon City">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Upload Image :</b></span>
+                            <input type="file" id="file" accept="image/*" onchange="loadImage(event)">
+                        </div>
+
+                        <input type="reset" value="Clear" class="clear-btn">
+                        <button href="#" id="down">Download</button>
+                    </div>
 
                     <div id="votersID">
 
@@ -175,7 +219,11 @@
                         </div>
 
                         <label for="file" class="upload"><b>Upload Image :</b></label>
-                        <input type="file" id="file" accept="image/*" onchange="loadImage(event)">
+                        
+                        <div class="inputBox">
+                            <span><b>Upload Image :</b></span>
+                            <input type="file" id="file" accept="image/*" onchange="loadImage(event)">
+                        </div>
 
                         <input type="reset" value="Clear" class="clear-btn">
 
