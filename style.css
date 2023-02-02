@@ -28,37 +28,37 @@ body {
     margin: 0 20px;
 }
 
-    .container .forms {
+.container .forms {
         display: flex;
         align-items: center;
         height: 350px;
         width: 200%;
         transition: height 0.2s ease;
-    }
+}
 
 
-    .container .form {
+.container .form {
         width: 50%;
         padding: 40px;
         background-color: #fff;
         transition: margin-left 0.18s ease;
-    }
+}
 
-    .container.active .login {
+.container.active .login {
         margin-left: -50%;
         opacity: 0;
         transition: margin-left 0.18s ease, opacity 0.15s ease;
-    }
+}
 
-    .container.active .forms {
+.container.active .forms {
         height: 600px;
-    }
+}
 
-    .container .form .title {
+.container .form .title {
         position: relative;
         font-size: 27px;
         font-weight: 600;
-    }
+}
 
 .form .title::before {
     content: '';
@@ -91,9 +91,9 @@ body {
     transition: all 0.2s ease;
 }
 
-    .input-field input:is(:focus, :valid) {
+.input-field input:is(:focus, :valid) {
         border-bottom-color: #4070f4;
-    }
+}
 
 .input-field i {
     position: absolute;
