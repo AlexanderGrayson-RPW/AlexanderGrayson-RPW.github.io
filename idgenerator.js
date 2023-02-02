@@ -1,5 +1,4 @@
 //TIN ID SECTION
-
 const tinCanvas = document.getElementById('tin')
 const ctx = tinCanvas.getContext('2d')
 const nameInput = document.getElementById('name')
@@ -12,13 +11,7 @@ const issueInput = document.getElementById('issue')
 const signatureInput = document.getElementById('signature')
 const downloadBtn = document.getElementById('download-btn')
 const idImage = document.getElementById('imgDisplayed');
-
 //var button = document.getElementById('logoutButton');
-
-/*button.addEventListener("click", () => {
-    alert("Do you want to logout?");
-    window.location.href = "index.html";
-});*/
 
 const tinImage = new Image()
 tinImage.src = 'TinID3.jpg';
@@ -35,8 +28,7 @@ tinCanvas.height = height;
 ctx.imageSmoothingEnabled = true;
 
 function drawImage() {
-    ctx.drawImage(image, 0, 0, tinCanvas.width, tinCanvas.height) //first 0 is right, second 0 is down
-
+    ctx.drawImage(tinImage, 0, 0, tinCanvas.width, tinCanvas.height) //first 0 is right, second 0 is down
     ctx.drawImage(idImage, 919, 293, 410, 420);
 
     ctx.font = 'bold 530% Palatino Linotype' //600 FONT BEFORE
@@ -72,70 +64,65 @@ function drawImage() {
     ctx.fillText(signatureInput.value, 250, 800);
 }
 
-signatureInput.addEventListener('input', function () {
-    drawImage()
-})
+    signatureInput.addEventListener('input', function () {
+        drawImage()
+    })
 
-issueInput.addEventListener('input', function () {
-    drawImage()
-})
+    issueInput.addEventListener('input', function () {
+        drawImage()
+    })
 
-birthdayInput.addEventListener('input', function () {
-    drawImage()
-})
+    birthdayInput.addEventListener('input', function () {
+        drawImage()
+    })
 
-address3Input.addEventListener('input', function () {
-    drawImage()
-})
+    address3Input.addEventListener('input', function () {
+        drawImage()
+    })
 
-address2Input.addEventListener('input', function () {
-    drawImage()
-})
+    address2Input.addEventListener('input', function () {
+        drawImage()
+    })
 
-addressInput.addEventListener('input', function () {
-    drawImage()
-})
+    addressInput.addEventListener('input', function () {
+        drawImage()
+    })
 
-tinIdInput.addEventListener('input', function () {
-    drawImage()
-})
+    tinIdInput.addEventListener('input', function () {
+        drawImage()
+    })
 
-nameInput.addEventListener('input', function () {
-    drawImage()
-})
+    nameInput.addEventListener('input', function () {
+        drawImage()
+    })
 
-function loadImage(event) {
-    const idImage = document.getElementById("imgDisplayed");
-    idImage.src = URL.createObjectURL(event.target.files[0]);
-}
-
-const clearCanvas = document.querySelector(".clear-btn");
-clearCanvas.addEventListener("click", () => {
-    ctx.clearRect(0, 0, tinCanvas.width, tinCanvas.height);
-});
-
-var logoutBtn = document.getElementById("logout-btn");
-logoutBtn.addEventListener("click", function() {
-    location.href = "index.html";
-});
-
-const download = document.getElementById("down");
-download.addEventListener("click", function () {
-
-    if (window.navigator.msSaveBlob) {
-
-        window.navigator.msSaveBlob(tinCanvas.msToBlob());
-    } else {
-
-        const a = document.createElement("a");
-        document.body.appendChild(a);
-        a.href = tinCanvas.toDataURL();
-        a.download = "ID Generator - " + nameInput.value +
-            " - Credits to Alexander Grayson ʕ•́ᴥ•̀ʔっ";
-        a.click();
-        document.body.removeChild(a);
+    function loadImage(event) {
+        const idImage = document.getElementById("imgDisplayed");
+        idImage.src = URL.createObjectURL(event.target.files[0]);
     }
-});
+
+    const clearCanvas = document.querySelector(".clear-btn");
+    clearCanvas.addEventListener("click", () => {
+        ctx.clearRect(0, 0, tinCanvas.width, tinCanvas.height);
+    });
+
+    const download = document.getElementById("down");
+    download.addEventListener("click", function () {
+
+        if (window.navigator.msSaveBlob) {
+
+            window.navigator.msSaveBlob(tinCanvas.msToBlob());
+        } else {
+
+            const a = document.createElement("a");
+            document.body.appendChild(a);
+            a.href = tinCanvas.toDataURL();
+            a.download = "ID Generator - " + nameInput.value +
+                " - Credits to Alexander Grayson ʕ•́ᴥ•̀ʔっ";
+            a.click();
+            document.body.removeChild(a);
+        }
+    });
 
 function notify(type,message){
 
