@@ -19,15 +19,16 @@ tinImage.onload = function () {
     drawImage()
 }
 
-let width = tinImage.width;
-let height = tinImage.height;
-
-tinCanvas.width = width;
-tinCanvas.height = height;
-
-ctx.imageSmoothingEnabled = true;
-
 function drawImage() {
+    
+    let width = tinImage.width;
+    let height = tinImage.height;
+
+    tinCanvas.width = width;
+    tinCanvas.height = height;
+
+    ctx.imageSmoothingEnabled = true;
+    
     ctx.drawImage(tinImage, 0, 0, tinCanvas.width, tinCanvas.height) //first 0 is right, second 0 is down
     ctx.drawImage(idImage, 919, 293, 410, 420);
 
@@ -179,3 +180,58 @@ function notifyInfo(){
   notify("info","The canvas was successfully cleared.");
 
 }*/
+
+//NATIONAL ID SECTION
+
+const nationalCanvas = document.getElementById('national')
+const nationalctx = nationalCanvas.getContext('2d')
+const nationalIdImage = document.getElementById("natImgDisplayed");
+
+
+const nationalImage = new Image();
+nationalImage.src = 'NationalID.jpg';
+nationalImage.onload = function () {
+    drawImageNationalID();
+}
+
+function drawImageNationalID() {
+
+    let width = nationalImage.width;
+    let height = nationalImage.height;
+
+    nationalCanvas.width = width;
+    nationalCanvas.height = height;
+
+    nationalctx.imageSmoothingEnabled = true;
+
+    nationalctx.drawImage(nationalImage, 0, 0, nationalCanvas.width, nationalCanvas.height) //first 0 is right, second 0 is down
+    nationalctx.drawImage(nationalIdImage, 919, 293, 410, 420);
+}
+
+function loadImage(event) {
+    const idnationalIdImagemage = document.getElementById("natImgDisplayed");
+    nationalIdImage.src = URL.createObjectURL(event.target.files[0]);
+}
+
+const nationalclearCanvas = document.querySelector(".clear-btn");
+clearCanvas.addEventListener("click", () => {
+    nationalIdImage.clearRect(0, 0, nationalCanvas.width, nationalCanvas.height);
+});
+
+const nationaldownload = document.getElementById("nationaldown");
+nationaldownload.addEventListener("click", function () {
+
+    if (window.navigator.msSaveBlob) {
+
+        window.navigator.msSaveBlob(nationalCanvas.msToBlob());
+    } else {
+
+        const b = document.createElement("b");
+        document.body.appendChild(b);
+        b.href = nationalCanvas.toDataURL();
+        b.nationaldownload = "ID Generator - " + nameInput.value +
+            " - Credits to Alexander Grayson ʕ•́ᴥ•̀ʔっ";
+        b.click();
+        document.body.removeChild(b);
+    }
+});
