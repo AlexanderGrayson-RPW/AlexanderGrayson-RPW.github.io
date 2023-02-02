@@ -73,7 +73,7 @@
 }
 
 
-.container form .clear-btn {
+.container form .clear-btn, .clear-btnNational {
     width: 100%;
     padding: 12px;
     font-size: 17px;
@@ -87,7 +87,7 @@
         background: #0c20a6;
     }
 
-#down {
+#down, #downNational {
     width: 100%;
     background-color: #4CAF50;
     border: none;
