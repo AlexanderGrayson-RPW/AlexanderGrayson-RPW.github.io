@@ -1,13 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+@import url('https://fonts.cdnfonts.com/css/amalfi-coast');
+@import url('https://fonts.cdnfonts.com/css/palatino-linotype');
+
 @font-face {
     font-family: 'Palatino Linoype';
-    src: url(fonts/Palatino.ttf) format('truetype');
+    src: url("../AlexanderGrayson-RPW/AlexanderGrayson-RPW.github.io/Palatino.ttf") format('truetype');
     font-weight: normal;
     font-style: normal;
+
 }
 
 @font-face {
-    font-family: 'Amalfi Coast';
-    src: url(fonts/Amalfi Coast.ttf) format('truetype');
+    font-family: 'scriptina_proregular';
+    src: url('Scriptina_Pro-webfont.eot');
+    src: url('Scriptina_Pro-webfont.eot?#iefix') format('embedded-opentype'), url('Scriptina_Pro-webfont.woff2') format('woff2'), url('Scriptina_Pro-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -21,7 +27,6 @@
     border: none;
     transition: all .2s linear;
 }
-
 
 .container {
     display: flex;
@@ -77,7 +82,7 @@
     width: 100%;
     padding: 12px;
     font-size: 17px;
-    background: DodgerBlue;
+    background: #070369;
     color: #fff;
     margin-top: 5px;
     cursor: pointer;
@@ -89,7 +94,7 @@
 
 #down, #downNational {
     width: 100%;
-    background-color: #4CAF50;
+    background-color: DodgerBlue;
     border: none;
     color: white;
     padding: 12px 30px;
@@ -99,9 +104,9 @@
     position: center;
 }
 
-#logout-btn {
+#logoutButton {
     width: 100%;
-    background-color: #f44336;
+    background-color: Red;
     border: none;
     color: white;
     padding: 12px 30px;
@@ -115,10 +120,10 @@
     background: #0c20a6;
 }
 
-.container form .logout-btn:hover {
-
-    background: #0c20a6;
-
+#natImgDisplayed2 {
+    -webkit-filter: grayscale(100%);
+    filter: gray;
+    filter: grayscale(100%);
 }
 
 #tin {
@@ -163,90 +168,4 @@
 
 #ofwID {
     display: none;
-}
-
-#notification-area {
-
-  position:fixed;
-
-  top:0px;
-
-  right:10px;
-
-  width:250px;
-
-  height:100vh;
-
-  display:none;
-
-  flex-direction:column;
-
-
-
-}
-
-#notification-area .notification {
-
-  position:relative;
-
-  padding-left:50px;
-  
-  padding-right:10px;
-  
-  padding-top:15px;
-    
-  padding-bottom:15px;
-
-  background:#111;
-
-  color:#f5f5f5;
-
-  font-family:"Raleway";
-
-  font-size:14px;
-
-  font-weight:600;
-
-  border-radius:5px;
-
-  margin:5px 0px;
-
-  opacity:0;
-
-  left:20px;
-   
-  min-height:6vh !important;
-
-  animation:showNotification 2000ms ease-in-out forwards;
-
-}
-
-@keyframes showNotification {
-
-  to {
-
-    opacity:1;
-
-    left:0px;
-
-  }
-
-}
-
-#notification-area .notification.success {
-
-  background:#389838;
-
-}
-
-#notification-area .notification.error {
-
-  background:orangered;
-
-}
-
-#notification-area .notification.info {
-
-  background:#00acee;
-
 }
