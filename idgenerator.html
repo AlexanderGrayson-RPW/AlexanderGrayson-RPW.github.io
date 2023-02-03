@@ -53,101 +53,51 @@
                         </td>
                     </tr><br />
 
-                         <div id="tinID">
+                    <div id="tinID">
 
-                             <center>
-                                 <img src="" id="imgDisplayed" style="display:none;">
-                                 <canvas id="tin" style="border:2px solid"></canvas>
-                             </center>
-
-                             <div class="inputBox">
-                                 <span><b>Fullname :</b></span>
-                                 <input id="name" type="text" placeholder="e.g. Juan Dela Cruz">
-                             </div>
-
-                             <div class="inputBox">
-                                 <span><b>ID Number :</b></span>
-                                 <input id="id" type="text" placeholder="e.g. 123-456-789-012">
-                             </div>
-
-                             <div class="inputBox">
-                                 <span><b>Address :</b></span>
-                                 <input id="address" type="text" placeholder="e.g. Quezon City">
-                             </div>
-
-                             <div class="inputBox">
-                                 <span><b>Address Extension 2 :</b></span>
-                                 <input id="address2" type="text" placeholder="e.g. Quezon City">
-                             </div>
-
-                             <div class="inputBox">
-                                 <span><b>Address Extension 3 :</b></span>
-                                 <input id="address3" type="text" placeholder="e.g. Quezon City">
-                             </div>
-
-                             <div class="inputBox">
-                                 <span><b>Date of Birth :</b></span>
-                                 <input id="birthday" type="text" placeholder="e.g. 01-01-1999">
-                             </div>
-
-                             <div class="inputBox">
-                                 <span><b>Issue Date :</b></span>
-                                 <input id="issue" type="text" placeholder="e.g. 01-01-2022">
-                             </div>
-
-                             <div class="inputBox">
-                                 <span><b>Electronic Signature :</b></span>
-                                 <input id="signature" type="text" placeholder="your signature">
-                             </div>
-
-                             <div class="inputBox">
-                                 <span><b>Upload Image :</b></span> 
-                                 <input type="file" id="file" accept="image/*" onchange="loadImage(event)">
-                             </div>
-                             
-
-                             <button class="clear-btn" onclick="notifyInfo()">Clear</button>
-                             <button href="#" id="down" onclick="notifySuccess()">Download</button>
-                             <button id="logout-btn" onclick="notifyError()">Logout</button>
-                             
-                         </div>
-                
-                <div id="notification-area"></div>
-                
-                <div id="natID" style="display:none;">
                         <center>
-                            <img src="" id="natImgDisplayed" style="display:none;">
-                            <canvas id="national" style="border:2px solid"></canvas>
+                            <img src="" id="imgDisplayed" style="display:none;">
+                            <canvas id="tin" style="border:2px solid"></canvas>
                         </center>
 
                         <div class="inputBox">
+                            <span><b>Fullname :</b></span>
+                            <input id="name" type="text" placeholder="e.g. Juan Dela Cruz">
+                        </div>
+
+                        <div class="inputBox">
                             <span><b>ID Number :</b></span>
-                            <input id="natId" type="text" placeholder="e.g. 1234-5678-9012-3456">
-                        </div>
-
-                        <div class="inputBox">
-                            <span><b>Last Name :</b></span>
-                            <input id="natlastName" type="text" placeholder="e.g. Grayson">
-                        </div>
-
-                        <div class="inputBox">
-                            <span><b>Given Name :</b></span>
-                            <input id="natgivenName" type="text" placeholder="e.g. Alexander">
-                        </div>
-
-                        <div class="inputBox">
-                            <span><b>Middle Name :</b></span>
-                            <input id="natmiddleName" type="text" placeholder="e.g. Alexander">
-                        </div>
-
-                        <div class="inputBox">
-                            <span><b>Date of Birth :</b></span>
-                            <input id="natbirthday" type="text" placeholder="e.g. 01-01-1999">
+                            <input id="id" type="text" placeholder="e.g. 123-456-789-012">
                         </div>
 
                         <div class="inputBox">
                             <span><b>Address :</b></span>
-                            <input id="nataddress" type="text" placeholder="e.g. Quezon City">
+                            <input id="address" type="text" placeholder="e.g. Quezon City">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Address Extension 2 :</b></span>
+                            <input id="address2" type="text" placeholder="e.g. Quezon City">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Address Extension 3 :</b></span>
+                            <input id="address3" type="text" placeholder="e.g. Quezon City">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Date of Birth :</b></span>
+                            <input id="birthday" type="text" placeholder="e.g. 01-01-1999">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Issue Date :</b></span>
+                            <input id="issue" type="text" placeholder="e.g. 01-01-2022">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Electronic Signature :</b></span>
+                            <input id="signature" type="text" placeholder="your signature">
                         </div>
 
                         <div class="inputBox">
@@ -155,15 +105,16 @@
                             <input type="file" id="file" accept="image/*" onchange="loadImage(event)">
                         </div>
 
-                        <input type="reset" value="Clear" class="clear-btnNational">
-                        <button href="#" id="downNational">Download</button>
-                        <button id="logout-btn" onclick="notifyError()">Logout</button>
+                        <input type="reset" value="Clear" class="clear-btn">
+                        <button href="#" id="down">Download</button>
+
+                        <!--<button id="logoutButton">Logout</button>-->
                     </div>
 
-                    <div id="votersID" style="display:none;">
+                    <div id="votersID">
 
                         <center>
-                            <img src="not_avail.jpg" width="100%">
+                            <img src="not_avail.jpg" width="100%" style="border:2px solid">
                         </center>
 
                         <div class="inputBox">
@@ -222,56 +173,98 @@
                         </div>
 
                         <label for="file" class="upload"><b>Upload Image :</b></label>
-                        
-                        <div class="inputBox">
-                            <span><b>Upload Image :</b></span>
-                            <input type="file" id="file" accept="image/*" onchange="loadImage(event)">
-                        </div>
+                        <input type="file" id="file" accept="image/*" onchange="loadImage(event)">
 
                         <input type="reset" value="Clear" class="clear-btn">
 
                         <button href="#" id="down">Download</button>
                     </div>
 
-                    <div id="passportID" style="display:none;">
+                    <div id="natID" style="display:none;">
                         <center>
-                            <img src="not_avail.jpg" width="100%">
+                            <img src="" id="natImgDisplayed" style="display:none;">
+                            <img src="" id="natImgDisplayed2" style="display:none;" alt="filter applied">
+                            <canvas id="national" style="border:2px solid"></canvas>
+                        </center>
+
+                        <div class="inputBox">
+                            <span><b>ID Number :</b></span>
+                            <input id="natId" type="text" placeholder="e.g. 1234-5678-9012-3456">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Last Name :</b></span>
+                            <input id="natLastName" type="text" placeholder="e.g. Grayson">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Given Name :</b></span>
+                            <input id="natGivenName" type="text" placeholder="e.g. Alexander">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Middle Name :</b></span>
+                            <input id="natMiddleName" type="text" placeholder="e.g. Alexander">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Date of Birth :</b></span>
+                            <input id="natBirthday" type="text" placeholder="e.g. 01-01-1999">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Address :</b></span>
+                            <input id="natAddress" type="text" placeholder="e.g. Quezon City">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Upload Image :</b></span>
+                            <input type="file" id="file" accept="image/*" onchange="loadNationalImage(event)">
+                        </div>
+
+                        <input type="reset" value="Clear" class="clear-btnNational">
+                        <button href="#" id="downNational">Download</button>
+                    </div>
+
+                    <div id="passportID">
+                        <center>
+                            <img src="not_avail.jpg" width="100%" style="border:2px solid">
                         </center>
                     </div>
 
-                    <div id="driversID" style="display:none;">
+                    <div id="driversID">
                         <center>
-                            <img src="not_avail.jpg" width="100%">
+                            <img src="not_avail.jpg" width="100%" style="border:2px solid">
                         </center>
                     </div>
 
-                    <div id="postalID" style="display:none;">
+                    <div id="postalID">
                         <center>
-                            <img src="not_avail.jpg" width="100%">
+                            <img src="not_avail.jpg" width="100%" style="border:2px solid">
                         </center>
                     </div>
 
-                    <div id="prcID" style="display:none;">
+                    <div id="prcID">
                         <center>
-                            <img src="not_avail.jpg" width="100%">
+                            <img src="not_avail.jpg" width="100%" style="border:2px solid">
                         </center>
                     </div>
 
-                    <div id="philhealthID" style="display:none;">
+                    <div id="philhealthID">
                         <center>
-                            <img src="not_avail.jpg" width="100%">
+                            <img src="not_avail.jpg" width="100%" style="border:2px solid">
                         </center>
                     </div>
 
-                    <div id="sssID" style="display:none;">
+                    <div id="sssID">
                         <center>
-                            <img src="not_avail.jpg" width="100%">
+                            <img src="not_avail.jpg" width="100%" style="border:2px solid">
                         </center>
                     </div>
 
-                    <div id="ofwID" style="display:none;">
+                    <div id="ofwID">
                         <center>
-                            <img src="not_avail.jpg" width="100%">
+                            <img src="not_avail.jpg" width="100%" style="border:2px solid">
                         </center>
                     </div>
 
@@ -281,7 +274,7 @@
     </div>
     <br />
 
-    <script type="text/javascript" src="idgenerator.js"></script>
     <script type="text/javascript" src="showID.js"></script>
+    <script type="text/javascript" src="idgenerator.js"></script>
 </body>
 </html>
