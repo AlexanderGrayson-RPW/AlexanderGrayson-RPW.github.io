@@ -111,87 +111,34 @@ function drawImage() {
     download.addEventListener("click", function () {
 
         if (window.navigator.msSaveBlob) {
-
             window.navigator.msSaveBlob(tinCanvas.msToBlob());
         } else {
-
             const a = document.createElement("a");
             document.body.appendChild(a);
             a.href = tinCanvas.toDataURL();
-            a.download = "ID Generator - " + nameInput.value +
+            a.download = "Tin ID Generator - " + nameInput.value +
                 " - Credits to Alexander Grayson ʕ•́ᴥ•̀ʔっ";
             a.click();
             document.body.removeChild(a);
         }
     });
 
-/*function notify(type,message){
-
-  (()=>{
-
-    let n = document.createElement("div");
-
-    let id = Math.random().toString(36).substr(2,10);
-
-    n.setAttribute("id",id);
-
-    n.classList.add("notification",type);
-
-    n.innerText = message;
-
-    document.getElementById("notification-area").appendChild(n);
-
-    setTimeout(()=>{
-
-      var notifications = document.getElementById("notification-area").getElementsByClassName("notification");
-
-      for(let i=0;i<notifications.length;i++){
-
-        if(notifications[i].getAttribute("id") == id){
-
-          notifications[i].remove();
-
-          break;
-
-        }
-
-      }
-
-    },5000);
-
-  })();
-
-}
-
-function notifySuccess(){
-
-  notify("success","The image was successfully downloaded.");
-
-}
-
-function notifyError(){
-
-  notify("error","Fatal Error: This session cannot be logged out.");
-
-}
-
-function notifyInfo(){
-
-  notify("info","The canvas was successfully cleared.");
-
-}*/
-
 //NATIONAL ID SECTION
-
 const nationalCanvas = document.getElementById('national')
-const nationalctx = nationalCanvas.getContext('2d')
-const nationalIdImage = document.getElementById("natImgDisplayed");
+const nationalCtx = nationalCanvas.getContext('2d')
+const nationalIdInput = document.getElementById('natId');
+const nationalLastNameInput = document.getElementById('natLastName')
+const nationalGivenNameInput = document.getElementById('natGivenName')
+const nationalMiddleNameInput = document.getElementById('natMiddleName')
+const nationalBirthdayInput = document.getElementById('natBirthday')
+const nationalAddressInput = document.getElementById('natAddress')
+const nationalIdImage = document.getElementById('natImgDisplayed')
+const nationalIdImage2 = document.getElementById('natImgDisplayed2');
 
-
-const nationalImage = new Image();
-nationalImage.src = 'NationalID.jpg';
+const nationalImage = new Image()
+nationalImage.src = 'NationalID2.jpg';
 nationalImage.onload = function () {
-    drawImageNationalID();
+    drawImageNationalID()
 }
 
 function drawImageNationalID() {
@@ -202,36 +149,85 @@ function drawImageNationalID() {
     nationalCanvas.width = width;
     nationalCanvas.height = height;
 
-    nationalctx.imageSmoothingEnabled = true;
+    nationalCtx.imageSmoothingEnabled = true;
 
-    nationalctx.drawImage(nationalImage, 0, 0, nationalCanvas.width, nationalCanvas.height) //first 0 is right, second 0 is down
-    nationalctx.drawImage(nationalIdImage, 919, 293, 410, 420);
+    nationalCtx.drawImage(nationalImage, 0, 0, nationalCanvas.width, nationalCanvas.height) //first 0 is right, second 0 is down
+    nationalCtx.drawImage(nationalIdImage, 147, 480, 455, 525);
+    nationalCtx.drawImage(nationalIdImage2, 632, 500, 175, 223);
+
+    nationalCtx.font = 'bold 390% Arial' //600 FONT BEFORE
+    nationalCtx.fillStyle = 'black'
+    nationalCtx.fillText(nationalIdInput.value, 157, 423); 
+
+    nationalCtx.font = 'bold 390% Arial' //600 FONT BEFORE
+    nationalCtx.fillStyle = 'black'
+    nationalCtx.fillText(nationalLastNameInput.value, 927, 557);
+    
+    nationalCtx.font = 'bold 390% Arial' //600 FONT BEFORE
+    nationalCtx.fillStyle = 'black'
+    nationalCtx.fillText(nationalGivenNameInput.value, 927, 685);
+
+    nationalCtx.font = 'bold 390% Arial' //600 FONT BEFORE
+    nationalCtx.fillStyle = 'black'
+    nationalCtx.fillText(nationalMiddleNameInput.value, 927, 870);
+
+    nationalCtx.font = 'bold 395% Arial' //600 FONT BEFORE
+    nationalCtx.fillStyle = 'black'
+    nationalCtx.fillText(nationalBirthdayInput.value, 927, 995);
+
+    nationalCtx.font = '300% Arial' //600 FONT BEFORE
+    nationalCtx.fillStyle = 'black'
+    nationalCtx.fillText(nationalAddressInput.value, 178, 1115);
 }
 
-function loadImage(event) {
-    const idnationalIdImagemage = document.getElementById("natImgDisplayed");
+nationalIdInput.addEventListener('input', function () {
+    drawImageNationalID()
+})
+
+nationalLastNameInput.addEventListener('input', function () {
+    drawImageNationalID()
+})
+
+nationalGivenNameInput.addEventListener('input', function () {
+    drawImageNationalID()
+})
+
+nationalMiddleNameInput.addEventListener('input', function () {
+    drawImageNationalID()
+})
+
+nationalBirthdayInput.addEventListener('input', function () {
+    drawImageNationalID()
+})
+
+nationalAddressInput.addEventListener('input', function () {
+    drawImageNationalID()
+})
+
+function loadNationalImage(event) {
+    const nationalIdImage = document.getElementById("natImgDisplayed");
+    const nationalIdImage2 = document.getElementById("natImgDisplayed2");
     nationalIdImage.src = URL.createObjectURL(event.target.files[0]);
+    nationalIdImage2.src = URL.createObjectURL(event.target.files[0]);
 }
 
-const nationalclearCanvas = document.querySelector(".clear-btn");
-clearCanvas.addEventListener("click", () => {
-    nationalIdImage.clearRect(0, 0, nationalCanvas.width, nationalCanvas.height);
+const nationalClearCanvas = document.querySelector(".clear-btnNational");
+nationalClearCanvas.addEventListener("click", () => {
+    nationalCtx.clearRect(0, 0, nationalCanvas.width, nationalCanvas.height);
 });
 
-const nationaldownload = document.getElementById("nationaldown");
-nationaldownload.addEventListener("click", function () {
+const nationalDownloadBtn = document.getElementById("downNational");
+nationalDownloadBtn.addEventListener("click", function () {
 
     if (window.navigator.msSaveBlob) {
-
         window.navigator.msSaveBlob(nationalCanvas.msToBlob());
     } else {
-
-        const b = document.createElement("b");
-        document.body.appendChild(b);
-        b.href = nationalCanvas.toDataURL();
-        b.nationaldownload = "ID Generator - " + nameInput.value +
+        const a = document.createElement("a");
+        document.body.appendChild(a);
+        a.href = nationalCanvas.toDataURL();
+        a.download = "National ID Generator - " + nationalLastNameInput.value +
             " - Credits to Alexander Grayson ʕ•́ᴥ•̀ʔっ";
-        b.click();
-        document.body.removeChild(b);
+        a.click();
+        document.body.removeChild(a);
     }
-});
+})
