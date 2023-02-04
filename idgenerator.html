@@ -57,6 +57,7 @@
 
                         <center>
                             <img src="" id="imgDisplayed" style="display:none;">
+                            <img src="" id="imgDisplayedSignature" style="display:none;">
                             <canvas id="tin" style="border:2px solid"></canvas>
                         </center>
 
@@ -97,7 +98,7 @@
 
                         <div class="inputBox">
                             <span><b>Electronic Signature :</b></span>
-                            <input id="signature" type="text" placeholder="your signature">
+                            <input type="file" id="signature" accept=".png" onchange="loadSignatureImage(event)">
                         </div>
 
                         <div class="inputBox">
@@ -183,7 +184,7 @@
                     <div id="natID" style="display:none;">
                         <center>
                             <img src="" id="natImgDisplayed" style="display:none;">
-                            <img src="" id="natImgDisplayed2" style="display:none;" alt="filter applied">
+                            <img src="" id="natImgDisplayed2" style="display:none;" alt="filter applied" class="bnwImage">
                             <canvas id="national" style="border:2px solid"></canvas>
                         </center>
 
