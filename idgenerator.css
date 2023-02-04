@@ -78,7 +78,7 @@
 }
 
 
-.container form .clear-btn, .clear-btnNational {
+.container form .clear-btn, .clear-btnNational, .clear-btnVoters {
     width: 100%;
     padding: 12px;
     font-size: 17px;
@@ -92,7 +92,7 @@
         background: #0c20a6;
     }
 
-#down, #downNational {
+#down, #downNational, #downVoters {
     width: 100%;
     background-color: DodgerBlue;
     border: none;
@@ -114,6 +114,10 @@
     font-size: 17px;
     margin-top: 5px;
     position: center;
+}
+
+.bnwImage {
+    filter: grayscale(100%)
 }
 
 .container form .down-btn:hover {
@@ -138,8 +142,10 @@
     image-rendering: pixelated;
 }
 
-#votersID {
-    display: none;
+#voters {
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
 }
 
 #passportID {
