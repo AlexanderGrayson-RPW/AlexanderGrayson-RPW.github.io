@@ -393,3 +393,27 @@ votersDownloadBtn.addEventListener("click", function () {
         document.body.removeChild(a);
     }
 });
+
+//DRIVER LICENSE SECTION
+
+const driversCanvas = document.getElementById('drivers')
+const driversCtx = driversCanvas.getContext('2d');
+
+const driversImage = new Image()
+driversImage.src = 'DrivingLicense.jpg';
+driversImage.onload = function () {
+    drawImageDriversID()
+}
+
+function drawImageDriversID() {
+
+    let width = driversImage.width;
+    let height = driversImage.height;
+
+    driversCanvas.width = width;
+    driversCanvas.height = height;
+
+    driversCtx.imageSmoothingEnabled = true;
+
+    driversCtx.drawImage(driversImage, 0, 0, driversCanvas.width, driversCanvas.height) //first 0 is right
+}
