@@ -54,7 +54,6 @@
                     </tr><br />
 
                     <div id="tinID">
-
                         <center>
                             <img src="" id="imgDisplayed" style="display:none;">
                             <img src="" id="imgDisplayedSignature" style="display:none;">
@@ -112,75 +111,6 @@
                         <!--<button id="logoutButton">Logout</button>-->
                     </div>
 
-                    <div id="votersID">
-
-                        <center>
-                            <img src="not_avail.jpg" width="100%" style="border:2px solid">
-                        </center>
-
-                        <div class="inputBox">
-                            <span><b>VIN :</b></span>
-                            <input id="vin" type="text" placeholder="e.g. 123-456-789-012">
-                        </div>
-
-                        <div class="inputBox">
-                            <span><b>Last Name :</b></span>
-                            <input id="name" type="text" placeholder="e.g. Juan Dela Cruz">
-                        </div>
-
-                        <div class="inputBox">
-                            <span><b>First Name :</b></span>
-                            <input id="name" type="text" placeholder="e.g. Juan Dela Cruz">
-                        </div>
-
-                        <div class="inputBox">
-                            <span><b>Middle Name :</b></span>
-                            <input id="name" type="text" placeholder="e.g. Juan Dela Cruz">
-                        </div>
-
-                        <div class="inputBox">
-                            <span><b>Date of Birth :</b></span>
-                            <input id="birthday" type="text" placeholder="e.g. 01-01-1999">
-                        </div>
-
-                        <div class="inputBox">
-                            <span><b>Civil Status :</b></span>
-                            <input id="civil" type="text" placeholder="e.g. 01-01-1999">
-                        </div>
-
-                        <div class="inputBox">
-                            <span><b>Citizenship :</b></span>
-                            <input id="citizenship" type="text" placeholder="e.g. 01-01-1999">
-                        </div>
-
-                        <div class="inputBox">
-                            <span><b>Address :</b></span>
-                            <input id="address" type="text" placeholder="e.g. Quezon City">
-                        </div>
-
-                        <div class="inputBox">
-                            <span><b>Address Extension 2 :</b></span>
-                            <input id="address2" type="text" placeholder="e.g. Quezon City">
-                        </div>
-
-                        <div class="inputBox">
-                            <span><b>Precinct Number :</b></span>
-                            <input id="precint" type="text" placeholder="e.g. 01-01-2022">
-                        </div>
-
-                        <div class="inputBox">
-                            <span><b>Electronic Signature :</b></span>
-                            <input id="signature" type="text" placeholder="your signature">
-                        </div>
-
-                        <label for="file" class="upload"><b>Upload Image :</b></label>
-                        <input type="file" id="file" accept="image/*" onchange="loadImage(event)">
-
-                        <input type="reset" value="Clear" class="clear-btn">
-
-                        <button href="#" id="down">Download</button>
-                    </div>
-
                     <div id="natID" style="display:none;">
                         <center>
                             <img src="" id="natImgDisplayed" style="display:none;">
@@ -205,7 +135,7 @@
 
                         <div class="inputBox">
                             <span><b>Middle Name :</b></span>
-                            <input id="natMiddleName" type="text" placeholder="e.g. Alexander">
+                            <input id="natMiddleName" type="text" placeholder="e.g. Daimatrious">
                         </div>
 
                         <div class="inputBox">
@@ -225,6 +155,82 @@
 
                         <input type="reset" value="Clear" class="clear-btnNational">
                         <button href="#" id="downNational">Download</button>
+                    </div>
+
+                    <div id="votersID" style="display:none;">
+                        <center>
+                            <img src="" id="votersImgDisplayed" style="display:none;">
+                            <img src="" id="votersSignatureDisplayed" style="display:none;">
+                            <canvas id="voters" style="border:2px solid"></canvas>
+                        </center>
+
+                        <div class="inputBox">
+                            <span><b>CITY :</b></span>
+                            <input id="votersCity" type="text" placeholder="e.g. MANILA CITY, NCR - THIRD DISTRICT">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>VIN :</b></span>
+                            <input id="votersVin" type="text" placeholder="e.g. 0000-0000A-A0000AAAA00000">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Last Name :</b></span>
+                            <input id="votersLastName" type="text" placeholder="e.g. Grayson">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>First Name :</b></span>
+                            <input id="votersFirstName" type="text" placeholder="e.g. Alexander">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Middle Name :</b></span>
+                            <input id="votersMiddleName" type="text" placeholder="e.g. Daimatrious">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Date of Birth :</b></span>
+                            <input id="votersBirthday" type="text" placeholder="e.g. 0000A">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Civil Status :</b></span>
+                            <input id="votersCivilStatus" type="text" placeholder="e.g. Single">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Citizenship :</b></span>
+                            <input id="votersCitizenship" type="text" placeholder="e.g. Filipino">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Address :</b></span>
+                            <input id="votersAddress1" type="text" placeholder="e.g. Quezon City">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Address Extension 2 :</b></span>
+                            <input id="votersAddress2" type="text" placeholder="e.g. Quezon City">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Precinct Number :</b></span>
+                            <input id="votersPrecinctNumber" type="text" placeholder="e.g. 01-01-2022">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Electronic Signature :</b></span>
+                            <input type="file" id="votersSignature" accept=".png" onchange="loadVotersSignatureImage(event)">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Upload Image :</b></span>
+                            <input type="file" id="file" accept="image/*" onchange="loadVotersImage(event)">
+                        </div>
+
+                        <input type="reset" value="Clear" class="clear-btnVoters">
+                        <button href="#" id="downVoters">Download</button>
                     </div>
 
                     <div id="passportID">
