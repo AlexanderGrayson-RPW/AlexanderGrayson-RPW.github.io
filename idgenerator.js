@@ -131,7 +131,7 @@ function drawImage() {
 //NATIONAL ID SECTION
 const nationalCanvas = document.getElementById('national')
 const nationalCtx = nationalCanvas.getContext('2d')
-const nationalIdInput = document.getElementById('natId');
+const nationalIdInput = document.getElementById('natId')
 const nationalLastNameInput = document.getElementById('natLastName')
 const nationalGivenNameInput = document.getElementById('natGivenName')
 const nationalMiddleNameInput = document.getElementById('natMiddleName')
@@ -235,4 +235,161 @@ nationalDownloadBtn.addEventListener("click", function () {
         a.click();
         document.body.removeChild(a);
     }
+});
+
+//VOTERS ID SECTION
+const votersCanvas = document.getElementById('voters')
+const votersCtx = votersCanvas.getContext('2d')
+const votersCityInput = document.getElementById('votersCity')
+const votersVinInput = document.getElementById('votersVin')
+const votersLastNameInput = document.getElementById('votersLastName')
+const votersFirstNameInput = document.getElementById('votersFirstName')
+const votersMiddleNameInput = document.getElementById('votersMiddleName')
+const votersBirthdayInput = document.getElementById('votersBirthday')
+const votersCivilStatusInput = document.getElementById('votersCivilStatus')
+const votersCitizenshipInput = document.getElementById('votersCitizenship')
+const votersAddressInput1 = document.getElementById('votersAddress1')
+const votersAddressInput2 = document.getElementById('votersAddress2')
+const votersPrecinctNumberInput = document.getElementById('votersPrecinctNumber')
+const votersIdImage = document.getElementById('votersImgDisplayed')
+const votersIdImageSignature = document.getElementById('votersSignatureDisplayed');
+
+const votersImage = new Image()
+votersImage.src = 'VotersID2.jpg';
+votersImage.onload = function () {
+    drawImageVotersID()
+}
+
+function drawImageVotersID() {
+
+    let width = votersImage.width;
+    let height = votersImage.height;
+
+    votersCanvas.width = width;
+    votersCanvas.height = height;
+
+    votersCtx.imageSmoothingEnabled = true;
+
+    votersCtx.drawImage(votersImage, 0, 0, votersCanvas.width, votersCanvas.height) //first 0 is right, second 0 is down
+    votersCtx.drawImage(votersIdImage, 72.5, 240, 197, 252);
+    votersCtx.drawImage(votersIdImageSignature, 85, 495, 250, 150);
+
+    votersCtx.font = '130% Arial' 
+    votersCtx.fillStyle = 'black'
+    votersCtx.fillText(votersCityInput.value, 305, 132); 
+
+    votersCtx.font = '163% Arial' 
+    votersCtx.fillStyle = 'black'
+    votersCtx.fillText(votersVinInput.value, 335, 162); 
+
+    votersCtx.font = 'bold 150% Arial' 
+    votersCtx.fillStyle = 'black'
+    votersCtx.fillText(votersLastNameInput.value, 307, 205); 
+
+    votersCtx.font = 'bold 150% Arial' 
+    votersCtx.fillStyle = 'black'
+    votersCtx.fillText(votersFirstNameInput.value, 307, 228); 
+
+    votersCtx.font = 'bold 150% Arial' 
+    votersCtx.fillStyle = 'black'
+    votersCtx.fillText(votersMiddleNameInput.value, 307, 251); 
+
+    votersCtx.font = '130% Arial' 
+    votersCtx.fillStyle = 'black'
+    votersCtx.fillText(votersBirthdayInput.value, 458, 293); 
+
+    votersCtx.font = '130% Arial' 
+    votersCtx.fillStyle = 'black'
+    votersCtx.fillText(votersCivilStatusInput.value, 458, 323); 
+
+    votersCtx.font = '130% Arial' 
+    votersCtx.fillStyle = 'black'
+    votersCtx.fillText(votersCitizenshipInput.value, 458, 350.5); 
+
+    votersCtx.font = '130% Arial' 
+    votersCtx.fillStyle = 'black'
+    votersCtx.fillText(votersAddressInput1.value, 310, 410);
+
+    votersCtx.font = '130% Arial' 
+    votersCtx.fillStyle = 'black'
+    votersCtx.fillText(votersAddressInput2.value, 310, 435);
+
+    votersCtx.font = '130% Arial' 
+    votersCtx.fillStyle = 'black'
+    votersCtx.fillText(votersPrecinctNumberInput.value, 495, 463);
+}
+
+votersCityInput.addEventListener('input', function () {
+    drawImageVotersID()
 })
+
+votersVinInput.addEventListener('input', function () {
+    drawImageVotersID()
+})
+
+votersLastNameInput.addEventListener('input', function () {
+    drawImageVotersID()
+})
+
+votersFirstNameInput.addEventListener('input', function () {
+    drawImageVotersID()
+})
+
+votersMiddleNameInput.addEventListener('input', function () {
+    drawImageVotersID()
+})
+
+votersBirthdayInput.addEventListener('input', function () {
+    drawImageVotersID()
+})
+
+votersCivilStatusInput.addEventListener('input', function () {
+    drawImageVotersID()
+})
+
+votersCitizenshipInput.addEventListener('input', function () {
+    drawImageVotersID()
+})
+
+votersAddressInput1.addEventListener('input', function () {
+    drawImageVotersID()
+})
+
+votersAddressInput2.addEventListener('input', function () {
+    drawImageVotersID()
+})
+
+votersPrecinctNumberInput.addEventListener('input', function () {
+    drawImageVotersID()
+})
+
+function loadVotersImage(event) {
+    const votersIdImage = document.getElementById("votersImgDisplayed");
+    votersIdImage.src = URL.createObjectURL(event.target.files[0]);
+}
+
+function loadVotersSignatureImage(event) {
+    const votersIdImageSignature = document.getElementById("votersSignatureDisplayed");
+    votersIdImageSignature.src = URL.createObjectURL(event.target.files[0]);
+}
+
+const votersClearCanvas = document.querySelector(".clear-btnVoters");
+votersClearCanvas.addEventListener("click", () => {
+    votersCtx.clearRect(0, 0, votersCanvas.width, votersCanvas.height);
+});
+
+const votersDownloadBtn = document.getElementById("downVoters");
+votersDownloadBtn.addEventListener("click", function () {
+
+    if (window.navigator.msSaveBlob) {
+        window.navigator.msSaveBlob(votersCanvas.msToBlob());
+    } else {
+        const a = document.createElement("a");
+        document.body.appendChild(a);
+        a.href = votersCanvas.toDataURL();
+        a.download = "Voters ID Generator - " + votersLastNameInput.value +
+            " - Credits to Alexander Grayson ʕ•́ᴥ•̀ʔっ";
+        a.click();
+        document.body.removeChild(a);
+    }
+});
