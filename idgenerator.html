@@ -20,9 +20,9 @@
 
             <div class="row">
 
-                <div class="col">
+                <class class="col">
                     <center>
-                        <p style=" font-size:150%"><b>ID CARD GENERATOR</b></p>
+                        <h1 data-text="Id Card Generator">Id Card Generator</h1>  
                     </center>
 
                     <div class="success">
@@ -35,20 +35,15 @@
                             </p>
                         </center>
                     </div>
-
                     <tr>
                         <td>
-                            <select id="country" onchange="showMap()" style=" width: 100%">
+                            <select id="country" onchange="showMap()">
                                 <option value="TIN">Tax Identification Card</option>
                                 <option value="NATIONAL">Philippine National ID</option>
                                 <option value="VOTER">Voters Identification Card</option>
-                                <option value="PASSPORT">Passport/Pasaporte</option>
                                 <option value="DRIVER">Driver's License Identification Card</option>
                                 <option value="POSTAL">Postal Identification Card</option>
                                 <option value="PRC">Professional Regulation Commission Identification Card</option>
-                                <option value="PHILHEALTH">Philhealth Identification Card</option>
-                                <option value="SSS">Social Security System Identification Card</option>
-                                <option value="OFW">Overseas Filipino Worker Identification Card</option>
                             </select>
                         </td>
                     </tr><br />
@@ -233,16 +228,18 @@
                         <button href="#" id="downVoters">Download</button>
                     </div>
 
-                    <div id="passportID">
+                    <div id="driversID" style="display:none;">
                         <center>
-                            <img src="not_avail.jpg" width="100%" style="border:2px solid">
+                            <img src="" id="driversImgDisplayed" style="display:none;">
+                            <img src="" id="driversSignatureDisplayed" style="display:none;">
+                            <canvas id="drivers" style="border:2px solid"></canvas>
                         </center>
-                    </div>
+                    
+                        <!--<div class="inputBox">
+                            <span><b>Fullname :</b></span>
+                            <input id="driversName" type="text" placeholder="e.g. Juan Dela Cruz">
+                        </div>-->
 
-                    <div id="driversID">
-                        <center>
-                            <img src="not_avail.jpg" width="100%" style="border:2px solid">
-                        </center>
                     </div>
 
                     <div id="postalID">
@@ -252,24 +249,6 @@
                     </div>
 
                     <div id="prcID">
-                        <center>
-                            <img src="not_avail.jpg" width="100%" style="border:2px solid">
-                        </center>
-                    </div>
-
-                    <div id="philhealthID">
-                        <center>
-                            <img src="not_avail.jpg" width="100%" style="border:2px solid">
-                        </center>
-                    </div>
-
-                    <div id="sssID">
-                        <center>
-                            <img src="not_avail.jpg" width="100%" style="border:2px solid">
-                        </center>
-                    </div>
-
-                    <div id="ofwID">
                         <center>
                             <img src="not_avail.jpg" width="100%" style="border:2px solid">
                         </center>
