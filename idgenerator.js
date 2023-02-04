@@ -8,8 +8,7 @@ const address2Input = document.getElementById('address2')
 const address3Input = document.getElementById('address3')
 const birthdayInput = document.getElementById('birthday')
 const issueInput = document.getElementById('issue')
-const signatureInput = document.getElementById('signature')
-const downloadBtn = document.getElementById('download-btn')
+const idImageSignature = document.getElementById('imgDisplayedSignature')
 const idImage = document.getElementById('imgDisplayed');
 //var button = document.getElementById('logoutButton');
 
@@ -20,7 +19,7 @@ tinImage.onload = function () {
 }
 
 function drawImage() {
-    
+
     let width = tinImage.width;
     let height = tinImage.height;
 
@@ -28,9 +27,10 @@ function drawImage() {
     tinCanvas.height = height;
 
     ctx.imageSmoothingEnabled = true;
-    
+
     ctx.drawImage(tinImage, 0, 0, tinCanvas.width, tinCanvas.height) //first 0 is right, second 0 is down
     ctx.drawImage(idImage, 919, 293, 410, 420);
+    ctx.drawImage(idImageSignature, 190, 725, 450, 150);
 
     ctx.font = 'bold 530% Palatino Linotype' //600 FONT BEFORE
     ctx.fillStyle = 'black'
@@ -60,14 +60,14 @@ function drawImage() {
     ctx.fillStyle = 'black'
     ctx.fillText(issueInput.value, 510, 700);
 
-    ctx.font = 'bold 310% Amalfi Coast'
+    /*ctx.font = 'bold 310% Amalfi Coast'
     ctx.fillStyle = 'black'
-    ctx.fillText(signatureInput.value, 250, 800);
+    ctx.fillText(signatureInput.value, 250, 800);*/
 }
 
-    signatureInput.addEventListener('input', function () {
+    /*signatureInput.addEventListener('input', function () {
         drawImage()
-    })
+    })*/
 
     issueInput.addEventListener('input', function () {
         drawImage()
@@ -100,6 +100,11 @@ function drawImage() {
     function loadImage(event) {
         const idImage = document.getElementById("imgDisplayed");
         idImage.src = URL.createObjectURL(event.target.files[0]);
+    }
+
+    function loadSignatureImage(event) {
+        const idImageSignature = document.getElementById("imgDisplayedSignature");
+        idImageSignature.src = URL.createObjectURL(event.target.files[0]);
     }
 
     const clearCanvas = document.querySelector(".clear-btn");
