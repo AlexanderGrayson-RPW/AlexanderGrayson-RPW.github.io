@@ -46,7 +46,7 @@ function Login() {
     username = document.getElementById("username").value;
     password = document.getElementById("password").value;
 
-    if(username == "Alexgray0407" && password == "Alexgray0407") {
+    if(username == "Grayson0407" && password == "Grayson0407") {
         alert("Login Successfully!");
         window.location.href="idgenerator.html";
         return false;
