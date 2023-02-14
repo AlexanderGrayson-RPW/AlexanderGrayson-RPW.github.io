@@ -1,12 +1,12 @@
 function showID() {
     validID = document.getElementById("validID").value;
+
     if (validID == "TIN") {
         document.getElementById("tinID").style.display = 'block'
     } else {
         document.getElementById("tinID").style.display = 'none'
     }
-
-    validID = document.getElementById("validID").value;
+;
     if (validID == "NATIONAL") {
         document.getElementById("natID").style.display = 'block'
     }
@@ -14,7 +14,6 @@ function showID() {
         document.getElementById("natID").style.display = 'none'
     }
 
-    validID = document.getElementById("validID").value;
     if (validID == "VOTER") {
         document.getElementById("votersID").style.display = 'block'
     }
@@ -22,7 +21,6 @@ function showID() {
         document.getElementById("votersID").style.display = 'none'
     }
 
-    validID = document.getElementById("validID").value;
     if (validID == "DRIVER") {
         document.getElementById("driversID").style.display = 'block'
     }
@@ -30,7 +28,6 @@ function showID() {
         document.getElementById("driversID").style.display = 'none'
     }
 
-    validID = document.getElementById("validID").value;
     if (validID == "POSTAL") {
         document.getElementById("postalID").style.display = 'block'
     }
@@ -38,7 +35,6 @@ function showID() {
         document.getElementById("postalID").style.display = 'none'
     }
 
-    validID = document.getElementById("validID").value;
     if (validID == "PRC") {
         document.getElementById("prcID").style.display = 'block'
     }
