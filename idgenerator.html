@@ -145,8 +145,40 @@
 
                         <div class="inputBox">
                             <span><b>Upload Image :</b></span>
-                            <input type="file" id="file" accept=".png" onchange="loadNationalImage(event)">
+                            <input type="file" id="file" accept=".png">
                         </div>
+
+                        <div class="inputBox">
+                            <span><b>Upload Second Image :</b></span>
+                            <input type="file" id="imageFileInput" accept=".png">
+                        </div>
+
+                        <div class="editor">
+
+                            <div class="toolbar">
+
+                              <div class="toolbar-item">
+                                <label class="tool-label" for="brightness">Brightness</label>
+                                <input class="tool-input" type="range" id="brightness" min="0" max="200">
+                              </div>
+
+                              <div class="toolbar-item">
+                                <label class="tool-label" for="saturation">Saturation</label>
+                                <input class="tool-input" type="range" id="saturation" min="0" max="200">
+                              </div>
+
+                              <div class="toolbar-item">
+                                <label class="tool-label" for="blur">Blur</label>
+                                <input class="tool-input" type="range" id="blur" min="0" max="25">
+                              </div>
+                              
+                              <div class="toolbar-item">
+                                <label class="tool-label" for="inversion">Inversion</label>
+                                <input class="tool-input" type="range" id="inversion" min="0" max="100">
+                                
+                              </div>
+                            </div>
+                          </div>
 
                         <input type="reset" value="Clear" class="clear-btnNational">
                         <button href="#" id="downNational">Download</button>
