@@ -140,6 +140,12 @@ const nationalAddressInput = document.getElementById('natAddress')
 const nationalIdImage = document.getElementById('natImgDisplayed')
 const nationalIdImage2 = document.getElementById('natImgDisplayed2');
 
+const fileInput = document.querySelector("#imageFileInput")
+const brightnessInput = document.querySelector("#brightness");
+const saturationInput = document.querySelector("#saturation");
+const blurInput = document.querySelector("#blur");
+const inversionInput = document.querySelector("#inversion");
+
 const nationalImage = new Image()
 nationalImage.src = 'NationalID2.jpg';
 nationalImage.onload = function () {
@@ -158,7 +164,7 @@ function drawImageNationalID() {
 
     nationalCtx.drawImage(nationalImage, 0, 0, nationalCanvas.width, nationalCanvas.height) //first 0 is right, second 0 is down
     nationalCtx.drawImage(nationalIdImage, 147, 480, 455, 525);
-    nationalCtx.drawImage(nationalIdImage2, 632, 500, 175, 223);
+    //nationalCtx.drawImage(nationalIdImage2, 632, 500, 175, 223);
 
     nationalCtx.font = 'bold 390% Arial' //600 FONT BEFORE
     nationalCtx.fillStyle = 'black'
@@ -183,6 +189,8 @@ function drawImageNationalID() {
     nationalCtx.font = '300% Arial' //600 FONT BEFORE
     nationalCtx.fillStyle = 'black'
     nationalCtx.fillText(nationalAddressInput.value, 178, 1115);
+
+    renderImage()
 }
 
 nationalIdInput.addEventListener('input', function () {
@@ -208,6 +216,68 @@ nationalBirthdayInput.addEventListener('input', function () {
 nationalAddressInput.addEventListener('input', function () {
     drawImageNationalID()
 })
+
+const settings = {};
+let image = null;
+
+function resetSettings() {
+  settings.brightness = "100";
+  settings.saturation = "100";
+  settings.blur = "0";
+  settings.inversion = "0";
+
+  brightnessInput.value = settings.brightness;
+  saturationInput.value = settings.saturation;
+  blurInput.value = settings.blur;
+  inversionInput.value = settings.inversion;
+}
+
+function updateSetting(key, value) {
+  if (!image) return;
+
+  settings[key] = value;
+  renderImage();
+}
+
+function generateFilter() {
+    const { brightness, saturation, blur, inversion } = settings;
+  
+    return `brightness(${brightness}%) saturate(${saturation}%) blur(${blur}px) invert(${inversion}%)`;
+}
+  
+function renderImage() {
+    //nationalCanvas.width = nationalImage.width;
+    //nationalCanvas.height = nationalImage.height;
+
+    nationalCtx.filter = generateFilter();
+    nationalCtx.drawImage(image, 632, 500, 175, 223); 
+}
+
+brightnessInput.addEventListener("change", () =>
+  updateSetting("brightness", brightnessInput.value)
+);
+saturationInput.addEventListener("change", () =>
+  updateSetting("saturation", saturationInput.value)
+);
+blurInput.addEventListener("change", () =>
+  updateSetting("blur", blurInput.value)
+);
+inversionInput.addEventListener("change", () =>
+  updateSetting("inversion", inversionInput.value)
+);
+
+fileInput.addEventListener("change", () => {
+    image = new Image();
+  
+    image.addEventListener("load", () => {
+      resetSettings();
+      renderImage();
+});
+  
+image.src = URL.createObjectURL(fileInput.files[0]);
+});
+  
+resetSettings();
 
 function loadNationalImage(event) {
     const nationalIdImage = document.getElementById("natImgDisplayed");
@@ -236,6 +306,7 @@ nationalDownloadBtn.addEventListener("click", function () {
         document.body.removeChild(a);
     }
 });
+
 
 //VOTERS ID SECTION
 const votersCanvas = document.getElementById('voters')
