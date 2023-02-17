@@ -407,7 +407,7 @@
 
                         <div class="inputBox">
                             <span><b>Date of Birth :</b></span>
-                            <input id="postalBirthday" type="text" placeholder="e.g. 2000/01/30">
+                            <input id="postalBirthday" type="text" placeholder="e.g. 01 JAN 2000">
                         </div>
 
                         <div class="inputBox">
@@ -417,7 +417,7 @@
 
                         <div class="inputBox">
                             <span><b>Valid Until :</b></span>
-                            <input id="postalValidUntil" type="text" placeholder="e.g. 2025/01/30">
+                            <input id="postalValidUntil" type="text" placeholder="e.g. 01 JAN 2030">
                         </div>
 
                         <div class="inputBox">
@@ -443,8 +443,64 @@
 
                     <div id="prcID" style="display:none;">
                         <center>
-                            <img src="not_avail.jpg" width="100%" style="border:2px solid">
+                            <img src="" id="prcImgDisplayed" style="display:none;">
+                            <img src="" id="prcImgDisplayed2" style="display:none;">
+                            <img src="" id="prcSignatureDisplayed" style="display:none;">
+                            <canvas id="prc" style="border:2px solid"></canvas>
                         </center>
+
+                        <div class="inputBox">
+                            <span><b>Last Name :</b></span>
+                            <input id="prcLastName" type="text" placeholder="e.g. Grayson">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>First Name :</b></span>
+                            <input id="prcFirstName" type="text" placeholder="e.g. Alexander">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Middle Name :</b></span>
+                            <input id="prcMiddleName" type="text" placeholder="e.g. Daimatrious">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Date of Birth :</b></span>
+                            <input id="prcBirthday" type="text" placeholder="e.g. 01 JAN 2000">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Registration No. :</b></span>
+                            <input id="prcRegistrationNo" type="text" placeholder="e.g. 0000000">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Registration Date :</b></span>
+                            <input id="prcRegistrationDate" type="text" placeholder="e.g. 2000/01/30">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Job :</b></span>
+                            <input id="prcJob" type="text" placeholder="e.g. Architect">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Valid Until :</b></span>
+                            <input id="prcValidUntil" type="text" placeholder="e.g. 01/01/2030">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Electronic Signature :</b></span>
+                            <input type="file" id="prcSignature" accept=".png" onchange="loadPrcSignatureImage(event)">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Upload Image :</b></span>
+                            <input type="file" id="file" accept="image/*" onchange="loadPrcImage(event)">
+                        </div>
+
+                        <input type="reset" value="Clear" class="clear-btnPrc">
+                        <button href="#" id="downPrc">Download</button>
                     </div>
 
                 </div>
