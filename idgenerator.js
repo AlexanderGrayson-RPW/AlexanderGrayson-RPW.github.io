@@ -551,7 +551,7 @@ function drawImageDriversID() {
     driversCtx.fillStyle = 'black'
     driversCtx.fillText(driversExpirationInput.value, 1770, 1350);
 
-    driversCtx.font = 'bold 500% Arial' 
+    driversCtx.font = '500% Arial' 
     driversCtx.fillStyle = 'black'
     driversCtx.fillText(driversAgencyInput.value, 2350, 1350);
 
