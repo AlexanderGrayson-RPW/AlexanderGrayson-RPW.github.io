@@ -823,3 +823,139 @@ postalDownloadBtn.addEventListener("click", function () {
         document.body.removeChild(a);
     }
 });
+
+//PRC ID SECTION
+
+const prcCanvas = document.getElementById('prc')
+const prcCtx = prcCanvas.getContext('2d')
+const prcLastNameInput = document.getElementById('prcLastName')
+const prcFirstNameInput = document.getElementById('prcFirstName')
+const prcMiddleNameInput = document.getElementById('prcMiddleName')
+const prcBirthdayInput = document.getElementById('prcBirthday')
+const prcRegistrationNoIInput = document.getElementById('prcRegistrationNo')
+const prcRegistrationDateInput = document.getElementById('prcRegistrationDate')
+const prcJobInput = document.getElementById('prcJob')
+const prcValidUntilInput = document.getElementById('prcValidUntil')
+const prcIdImage = document.getElementById('prcImgDisplayed')
+const prcIdImage2 = document.getElementById('prcImgDisplayed2')
+const prcIdImageSignature = document.getElementById('prcSignatureDisplayed');
+
+const prcImage = new Image()
+prcImage.src = 'PrcID.jpg';
+prcImage.onload = function () {
+    drawImagePrcID()
+}
+
+function drawImagePrcID() {
+
+    let width = prcImage.width;
+    let height = prcImage.height;
+
+    prcCanvas.width = width;
+    prcCanvas.height = height;
+
+    prcCtx.imageSmoothingEnabled = true;
+
+    prcCtx.drawImage(prcImage, 0, 0, prcCanvas.width, prcCanvas.height)
+
+    prcCtx.drawImage(prcIdImage, 1037, 315, 370, 368);
+    prcCtx.drawImage(prcIdImage2, 965, 750, 120, 170);
+    prcCtx.drawImage(prcIdImageSignature, 1110, 675, 300, 300);
+
+    prcCtx.font = 'bold 320% Arial' 
+    prcCtx.fillStyle = 'black'
+    prcCtx.fillText(prcLastNameInput.value, 400, 395);
+
+    prcCtx.font = 'bold 320% Arial' 
+    prcCtx.fillStyle = 'black'
+    prcCtx.fillText(prcFirstNameInput.value, 400, 450);
+
+    prcCtx.font = 'bold 320% Arial' 
+    prcCtx.fillStyle = 'black'
+    prcCtx.fillText(prcMiddleNameInput.value, 400, 505);
+
+    prcCtx.font = 'bold 320% Arial' 
+    prcCtx.fillStyle = 'black'
+    prcCtx.fillText(prcBirthdayInput.value, 400, 560);
+
+    prcCtx.font = 'bold 320% Arial' 
+    prcCtx.fillStyle = 'black'
+    prcCtx.fillText(prcRegistrationNoIInput.value, 400, 615);
+
+    prcCtx.font = 'bold 320% Arial' 
+    prcCtx.fillStyle = 'black'
+    prcCtx.fillText(prcRegistrationDateInput.value, 400, 670);
+
+    prcCtx.font = 'bold 380% Arial' 
+    prcCtx.fillStyle = 'white'
+    prcCtx.fillText(prcJobInput.value, 300, 735);
+
+    prcCtx.font = 'bold 340% Arial' 
+    prcCtx.fillStyle = 'black'
+    prcCtx.fillText(prcValidUntilInput.value, 1135, 915);
+}
+
+prcLastNameInput.addEventListener('input', function () {
+    drawImagePrcID()
+})
+
+prcFirstNameInput.addEventListener('input', function () {
+    drawImagePrcID()
+})
+
+prcMiddleNameInput.addEventListener('input', function () {
+    drawImagePrcID()
+})
+
+prcBirthdayInput.addEventListener('input', function () {
+    drawImagePrcID()
+})
+
+prcRegistrationNoIInput.addEventListener('input', function () {
+    drawImagePrcID()
+})
+
+prcRegistrationDateInput.addEventListener('input', function () {
+    drawImagePrcID()
+})
+
+prcJobInput.addEventListener('input', function () {
+    drawImagePrcID()
+})
+
+prcValidUntilInput.addEventListener('input', function () {
+    drawImagePrcID()
+})
+
+function loadPrcImage(event) {
+    const prcIdImage = document.getElementById("prcImgDisplayed");
+    prcIdImage.src = URL.createObjectURL(event.target.files[0]);
+    const prcIdImage2 = document.getElementById('prcImgDisplayed2')
+    prcIdImage2.src = URL.createObjectURL(event.target.files[0]);
+}
+
+function loadPrcSignatureImage(event) {
+    const prcIdImageSignature = document.getElementById("prcSignatureDisplayed");
+    prcIdImageSignature.src = URL.createObjectURL(event.target.files[0]);
+}
+
+const prcClearCanvas = document.querySelector(".clear-btnPrc");
+postalClearCanvas.addEventListener("click", () => {
+    prcCtx.clearRect(0, 0, prcCanvas.width, prcCanvas.height);
+});
+
+const prcDownloadBtn = document.getElementById("downPrc");
+prcDownloadBtn.addEventListener("click", function () {
+
+    if (window.navigator.msSaveBlob) {
+        window.navigator.msSaveBlob(prcCanvas.msToBlob());
+    } else {
+        const a = document.createElement("a");
+        document.body.appendChild(a);
+        a.href = prcCanvas.toDataURL();
+        a.download = "PRC ID - " + prcLastNameInput.value +
+            " - Credits to Alexander Grayson ʕ•́ᴥ•̀ʔっ";
+        a.click();
+        document.body.removeChild(a);
+    }
+});
