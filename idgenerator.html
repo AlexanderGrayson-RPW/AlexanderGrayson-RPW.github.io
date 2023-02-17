@@ -325,7 +325,7 @@
 
                         <div class="inputBox">
                             <span><b>Expiration Date :</b></span>
-                            <input id="driversExpiration" type="text" placeholder="e.g. 2000/01/30">
+                            <input id="driversExpiration" type="text" placeholder="e.g. 2030/01/30">
                         </div>
 
                         <div class="inputBox">
@@ -373,13 +373,75 @@
 
                     </div>
 
-                    <div id="postalID">
+                    <div id="postalID" style="display:none;">
                         <center>
-                            <img src="not_avail.jpg" width="100%" style="border:2px solid">
+                            <img src="" id="postalImgDisplayed" style="display:none;">
+                            <img src="" id="postalSignatureDisplayed" style="display:none;">
+                            <canvas id="postal" style="border:2px solid"></canvas>
                         </center>
+
+                        <div class="inputBox">
+                            <span><b>ID Number :</b></span>
+                            <input id="postalId" type="text" placeholder="e.g. PAN 123456789012-0">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Fullname :</b></span>
+                            <input id="postalName" type="text" placeholder="e.g. Alexander Grayson">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Address :</b></span>
+                            <input id="postalAddress1" type="text" placeholder="e.g. Quezon City">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Address Extension 2 :</b></span>
+                            <input id="postalAddress2" type="text" placeholder="e.g. Quezon City">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Address Extension 3 :</b></span>
+                            <input id="postalAddress3" type="text" placeholder="e.g. Quezon City">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Date of Birth :</b></span>
+                            <input id="postalBirthday" type="text" placeholder="e.g. 2000/01/30">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Nationality :</b></span>
+                            <input id="postalNationality" type="text" placeholder="e.g. FILIPINO">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Valid Until :</b></span>
+                            <input id="postalValidUntil" type="text" placeholder="e.g. 2025/01/30">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Issuing Post Office :</b></span>
+                            <input id="postalPostOffice" type="text" placeholder="e.g. PHL POST">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Electronic Signature :</b></span>
+                            <input type="file" id="postalSignature" accept=".png" onchange="loadPostalSignatureImage(event)">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Upload Image :</b></span>
+                            <input type="file" id="file" accept="image/*" onchange="loadPostalImage(event)">
+                        </div>
+
+                        <input type="reset" value="Clear" class="clear-btnPostal">
+                        <button href="#" id="downPostal">Download</button>
+
+
                     </div>
 
-                    <div id="prcID">
+                    <div id="prcID" style="display:none;">
                         <center>
                             <img src="not_avail.jpg" width="100%" style="border:2px solid">
                         </center>
