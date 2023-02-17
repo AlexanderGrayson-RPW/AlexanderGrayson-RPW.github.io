@@ -122,7 +122,7 @@ h1::before {
 }
 
 
-.container form .clear-btn, .clear-btnNational, .clear-btnVoters {
+.container form .clear-btn, .clear-btnNational, .clear-btnVoters, .clear-btnDrivers {
     width: 100%;
     padding: 12px;
     font-size: 17px;
@@ -136,7 +136,7 @@ h1::before {
         background: #0c20a6;
     }
 
-#down, #downNational, #downVoters {
+#down, #downNational, #downVoters, #downDrivers {
     width: 100%;
     background-color: DodgerBlue;
     border: none;
