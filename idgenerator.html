@@ -112,13 +112,15 @@
                             <img src="" id="natImgDisplayed2" style="display:none;" alt="filter applied" class="bnwImage">
                             <canvas id="national" style="border:2px solid"></canvas>
                         </center>
-                        
+
                         <center>
                             <h2><b><em>ADJUSTING TOOL :</em></b></h2>
                         </center>
 
                         <div class="editor">
+
                             <div class="toolbar">
+
                               <div class="toolbar-item">
                                 <label class="tool-label" for="brightness">Brightness</label>
                                 <input class="tool-input" type="range" id="brightness" min="0" max="200">
@@ -133,10 +135,11 @@
                                 <label class="tool-label" for="blur">Blur</label>
                                 <input class="tool-input" type="range" id="blur" min="0" max="25">
                               </div>
-
+                              
                               <div class="toolbar-item">
                                 <label class="tool-label" for="inversion">Inversion</label>
                                 <input class="tool-input" type="range" id="inversion" min="0" max="100">
+
                               </div>
                             </div>
                           </div>
@@ -173,11 +176,11 @@
 
                         <div class="inputBox">
                             <span><b>Upload Image :</b></span>
-                            <input type="file" id="file" accept=".png" onchange="loadNationalImage(event)">
+                            <input type="file" id="file" accept=".png">
                         </div>
 
                         <div class="inputBox">
-                            <span><b>Upload Second Image :</b></span>
+                            <span ><b>Upload Second Image :</b></span>
                             <input type="file" id="imageFileInput" accept=".png">
                         </div>
 
@@ -219,7 +222,7 @@
 
                         <div class="inputBox">
                             <span><b>Date of Birth :</b></span>
-                            <input id="votersBirthday" type="text" placeholder="e.g. 0000A">
+                            <input id="votersBirthday" type="text" placeholder="e.g. January 01, 2000">
                         </div>
 
                         <div class="inputBox">
@@ -265,13 +268,108 @@
                         <center>
                             <img src="" id="driversImgDisplayed" style="display:none;">
                             <img src="" id="driversSignatureDisplayed" style="display:none;">
+                            <img src="DrivingLicenseLines.png" id="driversLicenseLines" style="display:none;">
+                            <img src="DrivingLicenseLogo.png" id="driversLicenseLogo" style="display:none;">
                             <canvas id="drivers" style="border:2px solid"></canvas>
                         </center>
                     
                         <div class="inputBox">
                             <span><b>Fullname :</b></span>
-                            <input id="driversName" type="text" placeholder="e.g. Juan Dela Cruz">
+                            <input id="driversName" type="text" placeholder="e.g. Alexander Grayson">
                         </div>
+
+                        <div class="inputBox">
+                            <span><b>Nationality :</b></span>
+                            <input id="driversNationality" type="text" placeholder="e.g. PHL">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Sex :</b></span>
+                            <input id="driversSex" type="text" placeholder="e.g. M">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Date of Birth :</b></span>
+                            <input id="driversBirthday" type="text" placeholder="e.g. 2000/01/30">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Weight :</b></span>
+                            <input id="driversWeight" type="text" placeholder="e.g. 77">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Height :</b></span>
+                            <input id="driversHeight" type="text" placeholder="e.g. 1.76">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Address :</b></span>
+                            <input id="driversAddress1" type="text" placeholder="e.g. Quezon City">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Address Extension 2 :</b></span>
+                            <input id="driversAddress2" type="text" placeholder="e.g. Quezon City">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>License No. :</b></span>
+                            <input id="driversLicenseNo" type="text" placeholder="e.g. A00-00-000000">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Registration Date :</b></span>
+                            <input id="driversRegistration" type="text" placeholder="e.g. 2000/01/30">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Expiration Date :</b></span>
+                            <input id="driversExpiration" type="text" placeholder="e.g. 2000/01/30">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Agency Code :</b></span>
+                            <input id="driversAgency" type="text" placeholder="e.g. N29">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Blood Type :</b></span>
+                            <input id="driversBloodType" type="text" placeholder="e.g. B+">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Eyes Color :</b></span>
+                            <input id="driversEyesColor" type="text" placeholder="e.g. Black">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Restriction :</b></span>
+                            <input id="driversRestriction" type="text" placeholder="e.g. 1,2">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Conditions :</b></span>
+                            <input id="driversConditions" type="text" placeholder="e.g. None">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>License No. with Name Under 1x1 :</b></span>
+                            <input id="driversLicenseWithName" type="text" placeholder="e.g. A00-00-000000 Alexander Grayson">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Electronic Signature :</b></span>
+                            <input type="file" id="driversSignature" accept=".png" onchange="loadDriversSignatureImage(event)">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Upload Image :</b></span>
+                            <input type="file" id="file" accept=".png" onchange="loadDriversImage(event)">
+                        </div>
+
+                        <input type="reset" value="Clear" class="clear-btnDrivers">
+                        <button href="#" id="downDrivers">Download</button>
 
                     </div>
 
