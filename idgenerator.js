@@ -121,7 +121,7 @@ function drawImage() {
             const a = document.createElement("a");
             document.body.appendChild(a);
             a.href = tinCanvas.toDataURL();
-            a.download = "Tin ID Generator - " + nameInput.value +
+            a.download = "Tin ID - " + nameInput.value +
                 " - Credits to Alexander Grayson ʕ•́ᴥ•̀ʔっ";
             a.click();
             document.body.removeChild(a);
@@ -300,7 +300,7 @@ nationalDownloadBtn.addEventListener("click", function () {
         const a = document.createElement("a");
         document.body.appendChild(a);
         a.href = nationalCanvas.toDataURL();
-        a.download = "National ID Generator - " + nationalLastNameInput.value +
+        a.download = "National ID - " + nationalLastNameInput.value +
             " - Credits to Alexander Grayson ʕ•́ᴥ•̀ʔっ";
         a.click();
         document.body.removeChild(a);
@@ -458,7 +458,7 @@ votersDownloadBtn.addEventListener("click", function () {
         const a = document.createElement("a");
         document.body.appendChild(a);
         a.href = votersCanvas.toDataURL();
-        a.download = "Voters ID Generator - " + votersLastNameInput.value +
+        a.download = "Voters ID - " + votersLastNameInput.value +
             " - Credits to Alexander Grayson ʕ•́ᴥ•̀ʔっ";
         a.click();
         document.body.removeChild(a);
@@ -468,7 +468,28 @@ votersDownloadBtn.addEventListener("click", function () {
 //DRIVER LICENSE SECTION
 
 const driversCanvas = document.getElementById('drivers')
-const driversCtx = driversCanvas.getContext('2d');
+const driversCtx = driversCanvas.getContext('2d')
+const driversFullNameInput = document.getElementById('driversName')
+const driversNationalityInput = document.getElementById('driversNationality')
+const driversSexInput = document.getElementById('driversSex')
+const driversBirthdayInput = document.getElementById('driversBirthday')
+const driversWeightInput = document.getElementById('driversWeight')
+const driversHeightInput = document.getElementById('driversHeight')
+const driversAddressInput1 = document.getElementById('driversAddress1')
+const driversAddressInput2 = document.getElementById('driversAddress2')
+const driversLicenseNoInput = document.getElementById('driversLicenseNo')
+const driversRegistrationInput = document.getElementById('driversRegistration')
+const driversExpirationInput = document.getElementById('driversExpiration')
+const driversAgencyInput = document.getElementById('driversAgency')
+const driversBloodTypeInput = document.getElementById('driversBloodType')
+const driversEyesColorInput = document.getElementById('driversEyesColor')
+const driversRestrictionInput = document.getElementById('driversRestriction')
+const driversConditionsInput = document.getElementById('driversConditions')
+const driversLicenseWithName = document.getElementById('driversLicenseWithName')
+const driversIdImage = document.getElementById('driversImgDisplayed')
+const driversLicenseLines = document.getElementById('driversLicenseLines')
+const driversLicenseLogo = document.getElementById('driversLicenseLogo')
+const driversIdImageSignature = document.getElementById('driversSignatureDisplayed');
 
 const driversImage = new Image()
 driversImage.src = 'DrivingLicense.jpg';
@@ -487,4 +508,177 @@ function drawImageDriversID() {
     driversCtx.imageSmoothingEnabled = true;
 
     driversCtx.drawImage(driversImage, 0, 0, driversCanvas.width, driversCanvas.height) //first 0 is right
+    driversCtx.drawImage(driversIdImage, 270, 550, 780, 990);
+    driversCtx.drawImage(driversIdImageSignature, 450, 1560, 600, 500);
+
+    driversCtx.font = 'bold 550% Arial' 
+    driversCtx.fillStyle = 'black'
+    driversCtx.fillText(driversFullNameInput.value, 1080, 700);
+    
+    driversCtx.font = '450% Arial' 
+    driversCtx.fillStyle = 'black'
+    driversCtx.fillText(driversNationalityInput.value, 1080, 890);
+
+    driversCtx.font = '450% Arial' 
+    driversCtx.fillStyle = 'black'
+    driversCtx.fillText(driversSexInput.value, 1500, 890);
+
+    driversCtx.font = '450% Arial' 
+    driversCtx.fillStyle = 'black'
+    driversCtx.fillText(driversBirthdayInput.value, 1710, 890);
+
+    driversCtx.font = '450% Arial' 
+    driversCtx.fillStyle = 'black'
+    driversCtx.fillText(driversWeightInput.value, 2310, 890);
+
+    driversCtx.font = '450% Arial' 
+    driversCtx.fillStyle = 'black'
+    driversCtx.fillText(driversHeightInput.value, 2620, 890);
+
+    driversCtx.font = '450% Arial' 
+    driversCtx.fillStyle = 'black'
+    driversCtx.fillText(driversAddressInput1.value, 1080, 1080);
+
+    driversCtx.font = '450% Arial' 
+    driversCtx.fillStyle = 'black'
+    driversCtx.fillText(driversAddressInput2.value, 1080, 1180);
+
+    driversCtx.font = '500% Arial' 
+    driversCtx.fillStyle = 'black'
+    driversCtx.fillText(driversLicenseNoInput.value, 1080, 1350);
+
+    driversCtx.font = 'bold 500% Arial' 
+    driversCtx.fillStyle = 'black'
+    driversCtx.fillText(driversExpirationInput.value, 1770, 1350);
+
+    driversCtx.font = 'bold 500% Arial' 
+    driversCtx.fillStyle = 'black'
+    driversCtx.fillText(driversAgencyInput.value, 2350, 1350);
+
+    driversCtx.font = '450% Arial' 
+    driversCtx.fillStyle = 'black'
+    driversCtx.fillText(driversBloodTypeInput.value, 1200, 1520);
+
+    driversCtx.font = '450% Arial' 
+    driversCtx.fillStyle = 'black'
+    driversCtx.fillText(driversEyesColorInput.value, 1550, 1520);
+
+    driversCtx.font = '450% Arial' 
+    driversCtx.fillStyle = 'black'
+    driversCtx.fillText(driversConditionsInput.value, 1550, 1680);
+
+    driversCtx.font = '450% Arial' 
+    driversCtx.fillStyle = 'black'
+    driversCtx.fillText(driversRestrictionInput.value, 1200, 1680);
+
+    driversCtx.font = 'bold 400% Arial' 
+    driversCtx.fillStyle = 'white'
+    driversCtx.fillText(driversRegistrationInput.value, 500, 1520);
+
+    driversCtx.font = 'bold 150% Arial' 
+    driversCtx.fillStyle = 'black'
+    driversCtx.fillText(driversLicenseWithName.value, 330, 1570);
+
+
+    driversCtx.drawImage(driversLicenseLines, 260, 535, 800, 1100); //Lines
+    driversCtx.drawImage(driversLicenseLogo, 800, 1100, 600, 600);
 }
+
+driversFullNameInput.addEventListener('input', function () {
+    drawImageDriversID()
+})
+
+driversNationalityInput.addEventListener('input', function () {
+    drawImageDriversID()
+})
+
+driversSexInput.addEventListener('input', function () {
+    drawImageDriversID()
+})
+
+driversBirthdayInput.addEventListener('input', function () {
+    drawImageDriversID()
+})
+
+driversWeightInput.addEventListener('input', function () {
+    drawImageDriversID()
+})
+
+driversHeightInput.addEventListener('input', function () {
+    drawImageDriversID()
+})
+
+driversAddressInput1.addEventListener('input', function () {
+    drawImageDriversID()
+})
+
+driversAddressInput2.addEventListener('input', function () {
+    drawImageDriversID()
+})
+
+driversLicenseNoInput.addEventListener('input', function () {
+    drawImageDriversID()
+})
+
+driversRegistrationInput.addEventListener('input', function () {
+    drawImageDriversID()
+})
+
+driversExpirationInput.addEventListener('input', function () {
+    drawImageDriversID()
+})
+
+driversAgencyInput.addEventListener('input', function () {
+    drawImageDriversID()
+})
+
+driversBloodTypeInput.addEventListener('input', function () {
+    drawImageDriversID()
+})
+
+driversEyesColorInput.addEventListener('input', function () {
+    drawImageDriversID()
+})
+
+driversRestrictionInput.addEventListener('input', function () {
+    drawImageDriversID()
+})
+
+driversConditionsInput.addEventListener('input', function () {
+    drawImageDriversID()
+})
+
+driversLicenseWithName.addEventListener('input', function () {
+    drawImageDriversID()
+})
+
+function loadDriversImage(event) {
+    const driversIdImage = document.getElementById("driversImgDisplayed");
+    driversIdImage.src = URL.createObjectURL(event.target.files[0]);
+}
+
+function loadDriversSignatureImage(event) {
+    const driversIdImageSignature = document.getElementById("driversSignatureDisplayed");
+    driversIdImageSignature.src = URL.createObjectURL(event.target.files[0]);
+}
+
+const driversClearCanvas = document.querySelector(".clear-btnDrivers");
+driversClearCanvas.addEventListener("click", () => {
+    driversCtx.clearRect(0, 0, driversCanvas.width, driversCanvas.height);
+});
+
+const driversDownloadBtn = document.getElementById("downDrivers");
+driversDownloadBtn.addEventListener("click", function () {
+
+    if (window.navigator.msSaveBlob) {
+        window.navigator.msSaveBlob(driversCanvas.msToBlob());
+    } else {
+        const a = document.createElement("a");
+        document.body.appendChild(a);
+        a.href = driversCanvas.toDataURL();
+        a.download = "National ID - " + driversFullNameInput.value +
+            " - Credits to Alexander Grayson ʕ•́ᴥ•̀ʔっ";
+        a.click();
+        document.body.removeChild(a);
+    }
+});
