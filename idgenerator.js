@@ -551,7 +551,7 @@ function drawImageDriversID() {
     driversCtx.fillStyle = 'black'
     driversCtx.fillText(driversExpirationInput.value, 1770, 1350);
 
-    driversCtx.font = '500% Arial' 
+    driversCtx.font = 'bold 500% Arial' 
     driversCtx.fillStyle = 'black'
     driversCtx.fillText(driversAgencyInput.value, 2350, 1350);
 
@@ -677,6 +677,147 @@ driversDownloadBtn.addEventListener("click", function () {
         document.body.appendChild(a);
         a.href = driversCanvas.toDataURL();
         a.download = "National ID - " + driversFullNameInput.value +
+            " - Credits to Alexander Grayson ʕ•́ᴥ•̀ʔっ";
+        a.click();
+        document.body.removeChild(a);
+    }
+});
+
+//POSTAL ID SECTION
+
+const postalCanvas = document.getElementById('postal')
+const postalCtx = postalCanvas.getContext('2d')
+const postalIdInput = document.getElementById('postalId')
+const postalNameInput = document.getElementById('postalName')
+const postalAddressInput1 = document.getElementById('postalAddress1')
+const postalAddressInput2 = document.getElementById('postalAddress2')
+const postalAddressInput3 = document.getElementById('postalAddress3')
+const postalBirthdayInput = document.getElementById('postalBirthday')
+const postalNationalityInput = document.getElementById('postalNationality')
+const postalValidUntilInput = document.getElementById('postalValidUntil')
+const postalPostOfficeInput = document.getElementById('postalPostOffice')
+const postalIdImage = document.getElementById('postalImgDisplayed')
+const postalIdImageSignature = document.getElementById('postalSignatureDisplayed');
+
+const postalImage = new Image()
+postalImage.src = 'PostalID.jpg';
+postalImage.onload = function () {
+    drawImagePostalID()
+}
+
+function drawImagePostalID() {
+
+    let width = postalImage.width;
+    let height = postalImage.height;
+
+    postalCanvas.width = width;
+    postalCanvas.height = height;
+
+    postalCtx.imageSmoothingEnabled = true;
+
+    postalCtx.drawImage(postalImage, 0, 0, postalCanvas.width, postalCanvas.height)
+
+    postalCtx.drawImage(postalIdImage, 63, 255, 364, 486.5);
+    postalCtx.drawImage(postalIdImageSignature, 100, 750, 350, 350);
+
+    postalCtx.font = '240% Arial' 
+    postalCtx.fillStyle = 'black'
+    postalCtx.fillText(postalIdInput.value, 55, 240);
+
+    postalCtx.font = 'bold 370% Arial' 
+    postalCtx.fillStyle = 'black'
+    postalCtx.fillText(postalNameInput.value, 500, 340);
+
+    postalCtx.font = 'bold 280% Arial' 
+    postalCtx.fillStyle = 'black'
+    postalCtx.fillText(postalAddressInput1.value, 500, 435);
+
+    postalCtx.font = 'bold 280% Arial' 
+    postalCtx.fillStyle = 'black'
+    postalCtx.fillText(postalAddressInput2.value, 500, 480);
+
+    postalCtx.font = 'bold 280% Arial' 
+    postalCtx.fillStyle = 'black'
+    postalCtx.fillText(postalAddressInput3.value, 500, 525);
+
+    postalCtx.font = 'bold 280% Arial' 
+    postalCtx.fillStyle = 'black'
+    postalCtx.fillText(postalBirthdayInput.value, 500, 600);
+
+    postalCtx.font = 'bold 280% Arial' 
+    postalCtx.fillStyle = 'black'
+    postalCtx.fillText(postalValidUntilInput.value, 500, 675);
+
+    postalCtx.font = 'bold 280% Arial' 
+    postalCtx.fillStyle = 'black'
+    postalCtx.fillText(postalNationalityInput.value, 810, 600);
+
+    postalCtx.font = 'bold 280% Arial' 
+    postalCtx.fillStyle = 'black'
+    postalCtx.fillText(postalPostOfficeInput.value, 810, 675);
+}
+
+postalIdInput.addEventListener('input', function () {
+    drawImagePostalID()
+})
+
+postalNameInput.addEventListener('input', function () {
+    drawImagePostalID()
+})
+
+postalAddressInput1.addEventListener('input', function () {
+    drawImagePostalID()
+})
+
+postalAddressInput2.addEventListener('input', function () {
+    drawImagePostalID()
+})
+
+postalAddressInput3.addEventListener('input', function () {
+    drawImagePostalID()
+})
+
+postalBirthdayInput.addEventListener('input', function () {
+    drawImagePostalID()
+})
+
+postalNationalityInput.addEventListener('input', function () {
+    drawImagePostalID()
+})
+
+postalValidUntilInput.addEventListener('input', function () {
+    drawImagePostalID()
+})
+
+postalPostOfficeInput.addEventListener('input', function () {
+    drawImagePostalID()
+})
+
+function loadPostalImage(event) {
+    const postalIdImage = document.getElementById("postalImgDisplayed");
+    postalIdImage.src = URL.createObjectURL(event.target.files[0]);
+}
+
+function loadPostalSignatureImage(event) {
+    const postalIdImageSignature = document.getElementById("postalSignatureDisplayed");
+    postalIdImageSignature.src = URL.createObjectURL(event.target.files[0]);
+}
+
+const postalClearCanvas = document.querySelector(".clear-btnPostal");
+postalClearCanvas.addEventListener("click", () => {
+    postalCtx.clearRect(0, 0, postalCanvas.width, postalCanvas.height);
+});
+
+const postalDownloadBtn = document.getElementById("downPostal");
+postalDownloadBtn.addEventListener("click", function () {
+
+    if (window.navigator.msSaveBlob) {
+        window.navigator.msSaveBlob(driversCanvas.msToBlob());
+    } else {
+        const a = document.createElement("a");
+        document.body.appendChild(a);
+        a.href = postalCanvas.toDataURL();
+        a.download = "Postal ID - " + postalNameInput.value +
             " - Credits to Alexander Grayson ʕ•́ᴥ•̀ʔっ";
         a.click();
         document.body.removeChild(a);
