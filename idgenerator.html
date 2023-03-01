@@ -109,7 +109,6 @@
                     <div id="natID" style="display:none;">
                         <center>
                             <img src="" id="natImgDisplayed" style="display:none;">
-                            <img src="" id="natImgDisplayed2" style="display:none;" alt="filter applied" class="bnwImage">
                             <canvas id="national" style="border:2px solid"></canvas>
                         </center>
 
@@ -176,7 +175,7 @@
 
                         <div class="inputBox">
                             <span><b>Upload Image :</b></span>
-                            <input type="file" id="file" accept=".png">
+                            <input type="file" id="file" accept=".png" onchange="loadNationalImage(event)">
                         </div>
 
                         <div class="inputBox">
