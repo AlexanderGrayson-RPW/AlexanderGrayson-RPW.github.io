@@ -986,7 +986,7 @@ function drawImagePhID() {
 
     phCtx.drawImage(phImage, 0, 0, phCanvas.width, phCanvas.height)
 
-    phCtx.drawImage(phIdImage, 278, 630, 895, 866);
+    phCtx.drawImage(phIdImage, 278, 628, 897, 866);
     phCtx.drawImage(phIdImageSignature, 470, 1550, 600, 600);
 
     phCtx.font = 'bold 700% Arial' 
