@@ -41,4 +41,11 @@ function showID() {
     else {
         document.getElementById("prcID").style.display = 'none'
     }
+
+    if (validID == "PHID") {
+        document.getElementById("phID").style.display = 'block'
+    }
+    else {
+        document.getElementById("phID").style.display = 'none'
+    }
 }
