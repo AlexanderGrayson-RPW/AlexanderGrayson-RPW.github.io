@@ -137,8 +137,7 @@ const nationalGivenNameInput = document.getElementById('natGivenName')
 const nationalMiddleNameInput = document.getElementById('natMiddleName')
 const nationalBirthdayInput = document.getElementById('natBirthday')
 const nationalAddressInput = document.getElementById('natAddress')
-const nationalIdImage = document.getElementById('natImgDisplayed')
-const nationalIdImage2 = document.getElementById('natImgDisplayed2');
+const nationalIdImage = document.getElementById('natImgDisplayed');
 
 const fileInput = document.querySelector("#imageFileInput")
 const brightnessInput = document.querySelector("#brightness");
@@ -164,7 +163,6 @@ function drawImageNationalID() {
 
     nationalCtx.drawImage(nationalImage, 0, 0, nationalCanvas.width, nationalCanvas.height) //first 0 is right, second 0 is down
     nationalCtx.drawImage(nationalIdImage, 147, 480, 455, 525);
-    //nationalCtx.drawImage(nationalIdImage2, 632, 500, 175, 223);
 
     nationalCtx.font = 'bold 390% Arial' //600 FONT BEFORE
     nationalCtx.fillStyle = 'black'
@@ -246,9 +244,6 @@ function generateFilter() {
 }
   
 function renderImage() {
-    //nationalCanvas.width = nationalImage.width;
-    //nationalCanvas.height = nationalImage.height;
-
     nationalCtx.filter = generateFilter();
     nationalCtx.drawImage(image, 632, 500, 175, 223); 
 }
@@ -954,6 +949,121 @@ prcDownloadBtn.addEventListener("click", function () {
         document.body.appendChild(a);
         a.href = prcCanvas.toDataURL();
         a.download = "PRC ID - " + prcLastNameInput.value +
+            " - Credits to Alexander Grayson ʕ•́ᴥ•̀ʔっ";
+        a.click();
+        document.body.removeChild(a);
+    }
+});
+
+//PHILHEALTH ID SECTION
+
+const phCanvas = document.getElementById('ph')
+const phCtx = phCanvas.getContext('2d')
+const phIdNumberInput = document.getElementById('phIdNum')
+const phBCIdNumberInput = document.getElementById('phBCIdNum')
+const phFullNameInput = document.getElementById('phName')
+const phBirthdayAndSexInput = document.getElementById('phBirthdayAndSex')
+const phAddressInput = document.getElementById('phAddress')
+const phAddressInput2 = document.getElementById('phAddress2')
+const phIdImage = document.getElementById('phImgDisplayed')
+const phIdImageSignature = document.getElementById('phSignatureDisplayed');
+
+const phImage = new Image()
+phImage.src = 'PhilhealthID.jpg';
+phImage.onload = function () {
+    drawImagePhID()
+}
+
+function drawImagePhID() {
+
+    let width = phImage.width;
+    let height = phImage.height;
+
+    phCanvas.width = width;
+    phCanvas.height = height;
+
+    phCtx.imageSmoothingEnabled = true;
+
+    phCtx.drawImage(phImage, 0, 0, phCanvas.width, phCanvas.height)
+
+    phCtx.drawImage(phIdImage, 278, 630, 895, 866);
+    phCtx.drawImage(phIdImageSignature, 470, 1550, 600, 600);
+
+    phCtx.font = 'bold 700% Arial' 
+    phCtx.fillStyle = 'black'
+    phCtx.fillText(phIdNumberInput.value, 1255, 665);
+
+    phCtx.font = 'bold 500% Times New Roman' 
+    phCtx.fillStyle = 'black'
+    phCtx.fillText(phBCIdNumberInput.value, 1450, 1838);
+
+    phCtx.font = 'bold 530% Arial' 
+    phCtx.fillStyle = 'black'
+    phCtx.fillText(phFullNameInput.value, 1255, 780);
+
+    phCtx.font = '380% Arial' 
+    phCtx.fillStyle = 'black'
+    phCtx.fillText(phBirthdayAndSexInput.value, 1255, 872);
+
+    phCtx.font = '380% Arial' 
+    phCtx.fillStyle = 'black'
+    phCtx.fillText(phAddressInput.value, 1255, 938);
+
+    phCtx.font = '380% Arial' 
+    phCtx.fillStyle = 'black'
+    phCtx.fillText(phAddressInput2.value, 1255, 1004);    
+
+}
+
+phIdNumberInput.addEventListener('input', function () {
+    drawImagePhID()
+})
+
+phBCIdNumberInput.addEventListener('input', function () {
+    drawImagePhID()
+})
+
+phFullNameInput.addEventListener('input', function () {
+    drawImagePhID()
+})
+
+phBirthdayAndSexInput.addEventListener('input', function () {
+    drawImagePhID()
+})
+
+phAddressInput.addEventListener('input', function () {
+    drawImagePhID()
+})
+
+phAddressInput2.addEventListener('input', function () {
+    drawImagePhID()
+})
+
+function loadPhImage(event) {
+    const phIdImage = document.getElementById("phImgDisplayed");
+    phIdImage.src = URL.createObjectURL(event.target.files[0]);
+}
+
+function loadPhSignatureImage(event) {
+    const phIdImageSignature = document.getElementById("phSignatureDisplayed");
+    phIdImageSignature.src = URL.createObjectURL(event.target.files[0]);
+}
+
+const phClearCanvas = document.querySelector(".clear-btnPh");
+phClearCanvas.addEventListener("click", () => {
+    phCtx.clearRect(0, 0, phCanvas.width, phCanvas.height);
+});
+
+const phDownloadBtn = document.getElementById("downPh");
+phDownloadBtn.addEventListener("click", function () {
+
+    if (window.navigator.msSaveBlob) {
+        window.navigator.msSaveBlob(phCanvas.msToBlob());
+    } else {
+        const a = document.createElement("a");
+        document.body.appendChild(a);
+        a.href = phCanvas.toDataURL();
+        a.download = "PHILHEALTH ID - " + phFullNameInput.value +
             " - Credits to Alexander Grayson ʕ•́ᴥ•̀ʔっ";
         a.click();
         document.body.removeChild(a);
