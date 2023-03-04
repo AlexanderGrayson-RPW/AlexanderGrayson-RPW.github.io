@@ -44,6 +44,7 @@
                                 <option value="DRIVER">Driver's License Identification Card</option>
                                 <option value="POSTAL">Postal Identification Card</option>
                                 <option value="PRC">Professional Regulation Commission Identification Card</option>
+                                <option value="PHID">PhilHealth Identification Card</option>
                             </select>
                         </td>
                     </tr><br />
@@ -500,6 +501,57 @@
 
                         <input type="reset" value="Clear" class="clear-btnPrc">
                         <button href="#" id="downPrc">Download</button>
+                    </div>
+
+                    <div id="phID" style="display:none;">
+                        <center>
+                            <img src="" id="phImgDisplayed" style="display:none;">
+                            <img src="" id="phSignatureDisplayed" style="display:none;">
+                            <canvas id="ph" style="border:2px solid"></canvas>
+                        </center>
+
+                        <div class="inputBox">
+                            <span><b>ID Number :</b></span>
+                            <input id="phIdNum" type="text" placeholder="e.g. 123-456-789-012">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Barcode ID Number : </b>[Add 3 space per number]</span>
+                            <input id="phBCIdNum" type="text" placeholder="e.g. 123-456-789-012">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Fullname :</b></span>
+                            <input id="phName" type="text" placeholder="e.g. Alexander Grayson">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Date of Birth And Sex :</b></span>
+                            <input id="phBirthdayAndSex" type="text" placeholder="e.g. January 01, 2000">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Address :</b></span>
+                            <input id="phAddress" type="text" placeholder="e.g. Quezon City">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Address Extension 2 :</b></span>
+                            <input id="phAddress2" type="text" placeholder="e.g. Quezon City">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Electronic Signature :</b></span>
+                            <input type="file" id="prcSignature" accept=".png" onchange="loadPhSignatureImage(event)">
+                        </div>
+
+                        <div class="inputBox">
+                            <span><b>Upload Image :</b></span>
+                            <input type="file" id="file" accept="image/*" onchange="loadPhImage(event)">
+                        </div>
+
+                        <input type="reset" value="Clear" class="clear-btnPh">
+                        <button href="#" id="downPh">Download</button>
                     </div>
 
                 </div>
