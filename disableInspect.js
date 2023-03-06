@@ -10,7 +10,7 @@ document.onkeydown = e => {
     }
 
     if(e.ctrlKey && e.key == "u") {
-        alert("Don't try to view page sources!")
+        alert("Don't try to View Page Source!")
         return false
     }
 }
