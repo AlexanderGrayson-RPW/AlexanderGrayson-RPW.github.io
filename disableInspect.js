@@ -13,16 +13,4 @@ document.onkeydown = e => {
         alert("Don't try to view page sources!")
         return false
     }
-
-    if(e.ctrlKey && e.key == "c") {
-        alert("Don't try to copy page element!")
-        return false
-    }
-
-    if(e.ctrlKey && e.key == "v") {
-        alert("Don't try to paste anything to page!")
-        return false
-    }
 }
-
-
